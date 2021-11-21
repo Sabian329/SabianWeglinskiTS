@@ -33,11 +33,11 @@ export const MainImage = styled.img`
   z-index: 100;
 `;
 
-export const Descriptoion = styled.div`\
-display: flex;
+export const Descriptoion = styled.div`
+  display: flex;
   background-color: #000000;
   position: relative;
-  height: 30rem;
+  height: 40rem;
 `;
 export const Decoration = styled.div`
   background-color: #2c2c2c;
@@ -55,6 +55,8 @@ export const LeftWrapper = styled.div`
     width: 20rem;
     margin-bottom: 6rem;
     font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
   }
 `;
 export const RightWrapper = styled.div`
