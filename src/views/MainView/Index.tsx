@@ -1,9 +1,10 @@
 import React from "react";
+import { Wrapper } from "./Styled";
 
 export const MainView = () => {
   return (
-    <div>
+    <Wrapper>
       <p>hello</p>
-    </div>
+    </Wrapper>
   );
 };

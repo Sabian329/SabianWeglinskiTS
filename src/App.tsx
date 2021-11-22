@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import "./App.css";
 import { Header } from "./components/Header/Index";
 import { BrowserRouter, Route, Routes as Switch } from "react-router-dom";
 import { MainView } from "./views/MainView/Index";

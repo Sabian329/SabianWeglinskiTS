@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Heading } from "@chakra-ui/layout";
+import { Heading, Text } from "@chakra-ui/layout";
 import {
   Decoration,
   Descriptoion,
@@ -10,9 +10,13 @@ import {
   Titile,
   Wrapper,
 } from "./Styled";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Button } from "@chakra-ui/button";
+import { propNames } from "@chakra-ui/styled-system";
 
 interface IProjectProps {
+  name: string;
   logo: string;
   short: string;
   mainImage: string;
@@ -21,10 +25,13 @@ interface IProjectProps {
   photoTwo: string;
   apiLogo: string;
   color1: string;
+  color: string;
   color2: string;
+  link: string;
 }
 
 export const ProjectWrapper = ({
+  name,
   logo,
   short,
   mainImage,
@@ -33,49 +40,98 @@ export const ProjectWrapper = ({
   photoTwo,
   apiLogo,
   color1,
+  color,
   color2,
+  link,
 }: IProjectProps) => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    inView ? controls.start("visible") : controls.start("hidden");
+  }, [controls, inView]);
+
+  const PhoneVariants = {
+    hidden: {
+      y: 400,
+      x: name !== "CosyMovies" ? 58 : 0,
+      opacity: 0,
+      zIndex: 10,
+    },
+    visible: {
+      y: name !== "CosyMovies" ? 173 : 90,
+      x: name !== "CosyMovies" ? 58 : 0,
+      opacity: 1,
+      zIndex: 10,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   return (
-    <Wrapper>
-      <Titile style={{ backgroundColor: color1 }}>
-        <motion.div
-          animate={{
-            y: [70, 0],
-            opacity: [0, 1],
-          }}
-          transition={{ duration: [1.2] }}
-        >
-          <div>
-            <img src={logo} alt="cosymovies logo" />
-            <Heading>{short}</Heading>
-          </div>
-        </motion.div>
-      </Titile>
+    <>
+      <Wrapper>
+        <Titile style={{ backgroundColor: color1 }}>
+          <motion.div
+            animate={{
+              y: [70, 0],
+              opacity: [0, 1],
+            }}
+            transition={{ duration: [1.2] }}
+          >
+            <div>
+              <img src={logo} alt="cosymovies logo" />
+              <Heading>{short}</Heading>
+            </div>
+          </motion.div>
+        </Titile>
 
-      <AnimatePresence initial={true}>
-        <motion.div
-          animate={{
-            opacity: [0, 1],
-          }}
-          transition={{ duration: [2] }}
-        >
-          <MainImage src={mainImage} alt="cosymovies poster" />
-        </motion.div>
-      </AnimatePresence>
-      <Descriptoion style={{ backgroundColor: color1 }}>
-        <LeftWrapper>
-          <p style={{ backgroundColor: color2 }}>{overwiew}</p>
-        </LeftWrapper>
-        <RightWrapper>
-          <img src={photoOne} alt="the movie db logo" />
+        <AnimatePresence initial={true}>
+          <motion.div
+            animate={{
+              opacity: [0.1, 1],
+            }}
+            transition={{ duration: [2] }}
+          >
+            <MainImage src={mainImage} alt="cosymovies poster" />
+          </motion.div>
+        </AnimatePresence>
+        <Descriptoion style={{ backgroundColor: color }}>
+          <LeftWrapper>
+            <Heading>{name}</Heading>
+            <Button>
+              <a href={link} target="_blank" rel="noreferrer">
+                <Heading> Visit page</Heading>
+              </a>
+            </Button>
+            <Text>{overwiew}</Text>
+          </LeftWrapper>
+          <RightWrapper>
+            {/* <img src={photoOne} alt="the movie db logo" /> */}
 
-          <img src={photoTwo} alt="the movie db logo"></img>
-        </RightWrapper>
-        <MovieDB style={{ backgroundColor: color2 }}>
-          <img src={apiLogo} alt="the movie db logo" />
-        </MovieDB>
-      </Descriptoion>
-      <Decoration style={{ backgroundColor: color2 }} />
-    </Wrapper>
+            <motion.div
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={PhoneVariants}
+            >
+              <img
+                src={photoTwo}
+                alt="the movie db logo"
+                style={{
+                  width: `${name !== "CosyMovies" && "25rem"}`,
+                  height: `${name !== "CosyMovies" && "20rem"}`,
+                }}
+              ></img>
+            </motion.div>
+          </RightWrapper>
+          <MovieDB style={{ backgroundColor: color1 }}>
+            <img src={apiLogo} alt="the movie db logo" />
+          </MovieDB>
+        </Descriptoion>
+      </Wrapper>
+      <Decoration style={{ backgroundColor: color1 }} />
+    </>
   );
 };
