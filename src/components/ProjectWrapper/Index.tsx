@@ -3,6 +3,7 @@ import { Heading, Text } from "@chakra-ui/layout";
 import {
   Decoration,
   Descriptoion,
+  DescriptoionOne,
   LeftWrapper,
   MainImage,
   MovieDB,
@@ -46,6 +47,7 @@ export const ProjectWrapper = ({
 }: IProjectProps) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
+  // const { reff, inViewf } = useInView();
 
   useEffect(() => {
     inView ? controls.start("visible") : controls.start("hidden");
@@ -71,6 +73,21 @@ export const ProjectWrapper = ({
 
   return (
     <>
+      {name === "CosyMovies" && (
+        <motion.div
+          animate={{
+            opacity: [0, 1],
+          }}
+          transition={{ duration: [1.5] }}
+        >
+          <DescriptoionOne>
+            <Heading color="white" fontWeight="300" fontSize="2rem">
+              Immerse yourself in the world of movies and television series.
+            </Heading>
+          </DescriptoionOne>
+        </motion.div>
+      )}
+
       <Wrapper>
         <Titile style={{ backgroundColor: color1 }}>
           <motion.div
@@ -97,6 +114,7 @@ export const ProjectWrapper = ({
             <MainImage src={mainImage} alt="cosymovies poster" />
           </motion.div>
         </AnimatePresence>
+
         <Descriptoion style={{ backgroundColor: color }}>
           <LeftWrapper>
             <Heading>{name}</Heading>

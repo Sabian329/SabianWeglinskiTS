@@ -4,8 +4,10 @@ import { Wrapper } from "./Styled";
 
 export const TechnologiesView = () => {
   return (
-    <Wrapper>
-      <TechnologiesWrapper />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <TechnologiesWrapper />
+      </Wrapper>
+    </>
   );
 };

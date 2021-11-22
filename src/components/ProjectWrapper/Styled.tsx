@@ -40,9 +40,19 @@ export const MainImage = styled.img`
 
 export const Descriptoion = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000000;
   position: relative;
   height: 40rem;
+`;
+export const DescriptoionOne = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  position: relative;
+  height: 100vh;
 `;
 export const Decoration = styled.div`
   background-color: #2c2c2c;
