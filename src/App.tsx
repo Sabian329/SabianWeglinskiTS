@@ -8,10 +8,11 @@ import { TechnologiesView } from "./views/TechnologiesView/Index";
 import { Footer } from "./components/Footer/Index";
 import { ChakraProvider } from "@chakra-ui/react";
 import overrides from "./Theme/theme";
+import styled from "@emotion/styled";
 
 function App(): ReactElement {
   return (
-    <>
+    <Wrapper>
       <ChakraProvider theme={overrides}>
         <BrowserRouter>
           <Header />
@@ -24,8 +25,16 @@ function App(): ReactElement {
           <Footer />
         </BrowserRouter>
       </ChakraProvider>
-    </>
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`;

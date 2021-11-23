@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 200;
   margin: 1rem;
   &.active {

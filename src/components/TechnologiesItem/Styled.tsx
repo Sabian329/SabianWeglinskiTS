@@ -8,13 +8,13 @@ export const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #ffffff0;
   margin: 1rem;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
   backdrop-filter: blur(40px);
-  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
   p {
     margin: 1rem 1rem 0 1rem;
     font-size: 1rem;

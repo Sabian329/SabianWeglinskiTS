@@ -13,7 +13,9 @@ import {
 } from "./Styled";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Button } from "@chakra-ui/button";
+import { Button, ButtonGroup } from "@chakra-ui/button";
+import { PhoneVariants } from "../../Constans/Animations";
+import { TextVariants } from "../../Constans/Animations";
 
 interface IProjectProps {
   name: string;
@@ -28,6 +30,7 @@ interface IProjectProps {
   color: string;
   color2: string;
   link: string;
+  codeLink: string;
 }
 
 export const ProjectWrapper = ({
@@ -36,12 +39,11 @@ export const ProjectWrapper = ({
   short,
   mainImage,
   overwiew,
-  photoOne,
   photoTwo,
   apiLogo,
   color1,
   color,
-  color2,
+  codeLink,
   link,
 }: IProjectProps) => {
   const controls = useAnimation();
@@ -52,32 +54,15 @@ export const ProjectWrapper = ({
     inView ? controls.start("visible") : controls.start("hidden");
   }, [controls, inView]);
 
-  const PhoneVariants = {
-    hidden: {
-      y: 400,
-      x: name !== "CosyMovies" ? 58 : 0,
-      opacity: 0,
-      zIndex: 10,
-    },
-    visible: {
-      y: name !== "CosyMovies" ? 173 : 90,
-      x: name !== "CosyMovies" ? 58 : 0,
-      opacity: 1,
-      zIndex: 10,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
   return (
     <>
       {name === "CosyMovies" && (
         <motion.div
           animate={{
-            opacity: [0, 1],
+            opacity: [0, 1, 0, 0, 0],
+            height: [2000, 0],
           }}
-          transition={{ duration: [1.5] }}
+          transition={{ duration: [3.45] }}
         >
           <DescriptoionOne>
             <Heading color="white" fontWeight="300" fontSize="2rem">
@@ -89,40 +74,23 @@ export const ProjectWrapper = ({
 
       <Wrapper>
         <Titile style={{ backgroundColor: color1 }}>
-          <motion.div
-            animate={{
-              y: [70, 0],
-              opacity: [0, 1],
-            }}
-            transition={{ duration: [1.2] }}
-          >
-            <div>
-              <img src={logo} alt="cosymovies logo" />
-              <Heading>{short}</Heading>
-            </div>
-          </motion.div>
+          <img src={logo} alt="cosymovies logo" />
+          <Heading>{short}</Heading>
         </Titile>
-
-        <AnimatePresence initial={true}>
-          <motion.div
-            animate={{
-              opacity: [0.1, 1],
-            }}
-            transition={{ duration: [2] }}
-          >
-            <MainImage src={mainImage} alt="cosymovies poster" />
-          </motion.div>
+        <AnimatePresence>
+          <MainImage src={mainImage} alt="cosymovies poster" />
         </AnimatePresence>
 
         <Descriptoion style={{ backgroundColor: color }}>
           <LeftWrapper>
-            <Heading>{name}</Heading>
-            <Button>
-              <a href={link} target="_blank" rel="noreferrer">
-                <Heading> Visit page</Heading>
-              </a>
-            </Button>
-            <Text>{overwiew}</Text>
+            <motion.div
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={TextVariants}
+            >
+              <Text>{overwiew}</Text>
+            </motion.div>
           </LeftWrapper>
           <RightWrapper>
             {/* <img src={photoOne} alt="the movie db logo" /> */}
@@ -143,12 +111,30 @@ export const ProjectWrapper = ({
               ></img>
             </motion.div>
           </RightWrapper>
-          <MovieDB style={{ backgroundColor: color1 }}>
-            <img src={apiLogo} alt="the movie db logo" />
-          </MovieDB>
         </Descriptoion>
       </Wrapper>
-      <Decoration style={{ backgroundColor: color1 }} />
+      <Decoration>
+        <LeftWrapper>
+          <Text>{overwiew}</Text>
+          <ButtonGroup>
+            <a href={link} target="_blank" rel="noreferrer">
+              <Button>
+                <Heading>Visit page</Heading>
+              </Button>
+            </a>
+            <a href={codeLink} target="_blank" rel="noreferrer">
+              <Button>
+                <Heading>My code</Heading>
+              </Button>
+            </a>
+          </ButtonGroup>
+        </LeftWrapper>
+        <RightWrapper>
+          <MovieDB>
+            <img src={apiLogo} alt="the movie db logo" />
+          </MovieDB>
+        </RightWrapper>
+      </Decoration>
     </>
   );
 };

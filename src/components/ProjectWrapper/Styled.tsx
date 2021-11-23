@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { size } from "../../Theme/MediaQueries";
 
 export const Wrapper = styled.div`
-  max-width: ${size.laptop};
+  max-width: ${size.laptopL};
   overflow: hidden;
 `;
 export const Titile = styled.div`
@@ -12,7 +12,6 @@ export const Titile = styled.div`
   justify-content: center;
   background-color: #000000;
   padding: 1rem 0 1rem 0;
-  z-index: 10;
   overflow: hidden;
 
   h2 {
@@ -23,18 +22,16 @@ export const Titile = styled.div`
   img {
     width: 15rem;
   }
-  div {
+  /* div {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  } */
 `;
 export const MainImage = styled.img`
   width: 100%;
   margin: 0;
   padding: 0;
-  -webkit-mask-image: linear-gradient(to top, transparent 2%, black 20%);
-  mask-image: linear-gradient(to top, transparent 2%, black 20%);
   z-index: 100;
 `;
 
@@ -55,8 +52,10 @@ export const DescriptoionOne = styled.div`
   height: 100vh;
 `;
 export const Decoration = styled.div`
-  background-color: #2c2c2c;
-  height: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #000000;
+  height: 40rem;
   z-index: 100;
 `;
 export const LeftWrapper = styled.div`
@@ -67,17 +66,24 @@ export const LeftWrapper = styled.div`
   justify-content: center;
   align-items: center;
   align-items: center;
+  background-color: white;
+  color: black;
+  position: relative;
+
   button {
     border: unset;
-    padding: 0.9rem;
+    padding: 1.2rem;
     border-radius: 15px;
-    background-color: #252525;
+    background-color: #000000;
+    border-radius: 25px;
     h2 {
       font-size: 0.9rem;
-      font-weight: 400;
+      font-weight: 600;
       padding: 0;
       margin: 0;
+      color: #ffffff;
     }
+
     :hover {
       background-color: #444444;
     }
@@ -85,18 +91,15 @@ export const LeftWrapper = styled.div`
   a {
     text-decoration: none;
   }
-  h2 {
-    color: #ffffff;
-    font-weight: 400;
-  }
+
   p {
     text-align: justify;
-    color: #fff;
-    width: 23rem;
-    margin-bottom: 6rem;
+    color: #000000;
+    width: 24rem;
     font-size: 1.2rem;
     font-weight: 200;
     padding: 1rem;
+    margin: 0 0 2rem 0;
     border-radius: 15px;
     z-index: 11;
   }
@@ -118,18 +121,19 @@ export const RightWrapper = styled.div`
 `;
 
 export const MovieDB = styled.div`
-  position: absolute;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   bottom: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 6rem;
-  background-color: #2c2c2c;
-  border-radius: 0 50px 0 0;
+  background-color: #000000;
+  /* padding-top: 2rem; */
+  border-radius: 0 0px 0 0;
   z-index: 11;
   img {
     width: 20rem;
+    height: 9rem;
   }
 `;

@@ -12,6 +12,7 @@ export const projects = [
     color1: "#00000",
     color: "#00000",
     link: "https://cosymovies.netlify.app/",
+    codeLink: "https://github.com/Sabian329/CosyMovies",
     color2: "#2c2c2c",
   },
   {
@@ -23,10 +24,11 @@ export const projects = [
       "Track a handful of currency values in real time with data provided by the National Bank of Poland REST Web API. Built with React with styled-components, deployed on Netlify.",
     photoOne: "ProjectsViewAssets/CosyCurrency/iphonetrans.png",
     photoTwo: "ProjectsViewAssets/CosyCurrency/airw.png",
-    apiLogo: "ProjectsViewAssets/CosyCurrency/nbp2.png",
+    apiLogo: "ProjectsViewAssets/CosyCurrency/nbp.jpg",
     color1: "#9fb0de",
     color: "#00000",
     link: "https://cosycurrency.netlify.app/",
+    codeLink: "https://github.com/Sabian329/CosyCurrency",
     color2: "rgb(226, 234, 252)",
   },
 ];
