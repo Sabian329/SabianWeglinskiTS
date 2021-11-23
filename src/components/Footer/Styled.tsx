@@ -12,9 +12,10 @@ export const FooterWrapper = styled.footer`
   h2 {
     font-size: 0.8rem;
     margin: 0.5rem;
+    font-weight: 300;
     em {
       font-style: unset;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 `;

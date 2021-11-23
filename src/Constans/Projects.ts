@@ -5,7 +5,7 @@ export const projects = [
     short: "Movies and tv series browser",
     mainImage: "ProjectsViewAssets/CosyMovies/CM.jpg",
     overwiew:
-      "Immerse yourself in the world of movies and television series. Choose from over 10 thousand productions available. Get to know insights and cast and add best titles to your favourites. All of that available with fresh, sophisticated and responsive design. Made possible thanks to The Movie Database REST API. Built with React.js with styled-components and Chakra UI. Deployed on Netlify. ",
+      "Choose from over 10 thousand productions available. Get to know insights and cast and add best titles to your favourites. All of that available with fresh, sophisticated and responsive design. Made possible thanks to The Movie Database REST API. Built with React.js with styled-components and Chakra UI. Deployed on Netlify. ",
     photoOne: "ProjectsViewAssets/CosyMovies/card.png",
     photoTwo: "ProjectsViewAssets/CosyMovies/iphone2.png",
     apiLogo: "ProjectsViewAssets/CosyMovies/tmdb.svg",

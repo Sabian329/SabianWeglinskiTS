@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { Heading, Text } from "@chakra-ui/layout";
 import {
   Decoration,
@@ -14,7 +14,6 @@ import {
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@chakra-ui/button";
-import { propNames } from "@chakra-ui/styled-system";
 
 interface IProjectProps {
   name: string;
