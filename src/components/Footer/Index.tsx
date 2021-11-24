@@ -1,10 +1,9 @@
-import { Heading } from "@chakra-ui/layout";
 import React from "react";
-import { FooterWrapper, MDB, SocialWrapper } from "./Styled";
+import { Heading } from "@chakra-ui/layout";
+import { FooterWrapper, SocialWrapper } from "./Styled";
 import fbLogo from "../../Assets/fb.png";
 import inLogo from "../../Assets/linked.png";
 import gitLogo from "../../Assets/git.png";
-import tmdb from "../../Assets/tmdb.svg";
 
 export const Footer = () => {
   return (

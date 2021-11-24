@@ -1,10 +1,10 @@
 import React from "react";
-import { Wrapper } from "./Styled";
+import { EmailForm } from "../../components/EmailForm/Index";
 
 export const AboutView = () => {
   return (
-    <Wrapper>
-      <p>hello</p>
-    </Wrapper>
+    <div>
+      <EmailForm />
+    </div>
   );
 };

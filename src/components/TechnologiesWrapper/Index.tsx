@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import { Technologies } from "../../Constans/Technologies";
 import { TechnologiesItem } from "../TechnologiesItem/Index";
 import { TextWrapper, Wrapper } from "./Styled";

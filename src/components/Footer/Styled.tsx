@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 export const FooterWrapper = styled.footer`
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

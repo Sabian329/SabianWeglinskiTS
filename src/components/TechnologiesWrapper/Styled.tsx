@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.table`
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   align-items: center;
-  background-color: white;
+  background-color: #000000;
 `;
 export const TextWrapper = styled.div`
   padding: 0;

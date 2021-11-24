@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { StyledLink } from "./Styled";
 
 export const NavBar = () => {

@@ -24,3 +24,16 @@ export const TextVariants = {
     },
   },
 };
+export const LogoVariants = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};

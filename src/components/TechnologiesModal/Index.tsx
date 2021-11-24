@@ -1,5 +1,4 @@
 import React from "react";
-import { useDisclosure } from "@chakra-ui/hooks";
 import {
   Modal,
   ModalOverlay,
@@ -11,14 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Logo } from "./Styled";
-
-interface IModalProps {
-  onClose: () => void;
-  isOpen: boolean;
-  name: string;
-  logo: string;
-  description: string;
-}
+import { IModalProps } from "../../Constans/Interfaces";
 
 export const TechnologiesModal = ({
   onClose,

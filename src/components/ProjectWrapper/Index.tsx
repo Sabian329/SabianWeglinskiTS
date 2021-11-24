@@ -1,37 +1,20 @@
 import React, { useEffect } from "react";
 import { Heading, Text } from "@chakra-ui/layout";
 import {
-  Decoration,
   Descriptoion,
   DescriptoionOne,
-  LeftWrapper,
+  WhiteWrapper,
   MainImage,
-  MovieDB,
-  RightWrapper,
+  BlackWrapper,
   Titile,
   Wrapper,
 } from "./Styled";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Button, ButtonGroup } from "@chakra-ui/button";
 import { PhoneVariants } from "../../Constans/Animations";
 import { TextVariants } from "../../Constans/Animations";
-
-interface IProjectProps {
-  name: string;
-  logo: string;
-  short: string;
-  mainImage: string;
-  overwiew: string;
-  photoOne: string;
-  photoTwo: string;
-  apiLogo: string;
-  color1: string;
-  color: string;
-  color2: string;
-  link: string;
-  codeLink: string;
-}
+import { ProjectSection } from "../ProjectSection/Index";
+import { IProjectProps } from "../../Constans/Interfaces";
 
 export const ProjectWrapper = ({
   name,
@@ -39,19 +22,18 @@ export const ProjectWrapper = ({
   short,
   mainImage,
   overwiew,
+  overwiewTwo,
   photoTwo,
   apiLogo,
-  color1,
-  color,
   codeLink,
   link,
+  apiLink,
 }: IProjectProps) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
-  // const { reff, inViewf } = useInView();
 
   useEffect(() => {
-    inView ? controls.start("visible") : controls.start("hidden");
+    inView && controls.start("visible");
   }, [controls, inView]);
 
   return (
@@ -73,16 +55,15 @@ export const ProjectWrapper = ({
       )}
 
       <Wrapper>
-        <Titile style={{ backgroundColor: color1 }}>
+        <Titile>
           <img src={logo} alt="cosymovies logo" />
           <Heading>{short}</Heading>
         </Titile>
-        <AnimatePresence>
-          <MainImage src={mainImage} alt="cosymovies poster" />
-        </AnimatePresence>
 
-        <Descriptoion style={{ backgroundColor: color }}>
-          <LeftWrapper>
+        <MainImage src={mainImage} alt="cosymovies poster" />
+
+        <Descriptoion>
+          <WhiteWrapper>
             <motion.div
               ref={ref}
               initial="hidden"
@@ -91,12 +72,9 @@ export const ProjectWrapper = ({
             >
               <Text>{overwiew}</Text>
             </motion.div>
-          </LeftWrapper>
-          <RightWrapper>
-            {/* <img src={photoOne} alt="the movie db logo" /> */}
-
+          </WhiteWrapper>
+          <BlackWrapper>
             <motion.div
-              ref={ref}
               initial="hidden"
               animate={controls}
               variants={PhoneVariants}
@@ -110,31 +88,16 @@ export const ProjectWrapper = ({
                 }}
               ></img>
             </motion.div>
-          </RightWrapper>
+          </BlackWrapper>
         </Descriptoion>
+        <ProjectSection
+          overwiewTwo={overwiewTwo}
+          link={link}
+          codeLink={codeLink}
+          apiLogo={apiLogo}
+          apiLink={apiLink}
+        />
       </Wrapper>
-      <Decoration>
-        <LeftWrapper>
-          <Text>{overwiew}</Text>
-          <ButtonGroup>
-            <a href={link} target="_blank" rel="noreferrer">
-              <Button>
-                <Heading>Visit page</Heading>
-              </Button>
-            </a>
-            <a href={codeLink} target="_blank" rel="noreferrer">
-              <Button>
-                <Heading>My code</Heading>
-              </Button>
-            </a>
-          </ButtonGroup>
-        </LeftWrapper>
-        <RightWrapper>
-          <MovieDB>
-            <img src={apiLogo} alt="the movie db logo" />
-          </MovieDB>
-        </RightWrapper>
-      </Decoration>
     </>
   );
 };

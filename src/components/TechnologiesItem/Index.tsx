@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Wrapper } from "./Styled";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { TechnologiesModal } from "../TechnologiesModal/Index";
+import { ITechnologiesProps } from "../../Constans/Interfaces";
 
-interface ITechnologiesProps {
-  name: string;
-  logo: string;
-  description: string;
-}
 export const TechnologiesItem = ({
   name,
   logo,
@@ -20,7 +16,7 @@ export const TechnologiesItem = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
-    inView ? controls.start("visible") : controls.start("hidden");
+    inView && controls.start("visible");
   }, [controls, inView]);
 
   const PhoneVariants = {
@@ -42,19 +38,23 @@ export const TechnologiesItem = ({
       animate={controls}
       variants={PhoneVariants}
     >
-      <Wrapper ref={ref}>
-        <p>{name}</p>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.1 }}>
-          <img onClick={onOpen} src={logo} alt={`${name} logo`} />
-        </motion.div>
-        <TechnologiesModal
-          description={description}
-          name={name}
-          logo={logo}
-          onClose={onClose}
-          isOpen={isOpen}
-        />
-      </Wrapper>
+      <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 1.09 }}>
+        <tr>
+          <Wrapper ref={ref} onClick={onOpen}>
+            <p>{name}</p>
+
+            <img src={logo} alt={`${name} logo`} />
+
+            <TechnologiesModal
+              description={description}
+              name={name}
+              logo={logo}
+              onClose={onClose}
+              isOpen={isOpen}
+            />
+          </Wrapper>
+        </tr>
+      </motion.div>
     </motion.div>
   );
 };

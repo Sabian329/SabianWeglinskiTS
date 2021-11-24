@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { size } from "../../Theme/MediaQueries";
+import { device, size } from "../../Theme/MediaQueries";
 
 export const Wrapper = styled.div`
   max-width: ${size.laptopL};
@@ -11,7 +11,7 @@ export const Titile = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #000000;
-  padding: 1rem 0 1rem 0;
+  padding: 2rem 0 2rem 0;
   overflow: hidden;
 
   h2 {
@@ -20,13 +20,9 @@ export const Titile = styled.div`
     font-size: 1rem;
   }
   img {
-    width: 15rem;
+    height: 3.5rem;
+    margin: 1rem;
   }
-  /* div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
 `;
 export const MainImage = styled.img`
   width: 100%;
@@ -42,6 +38,11 @@ export const Descriptoion = styled.div`
   background-color: #000000;
   position: relative;
   height: 40rem;
+  @media ${device.mobileL} {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
 `;
 export const DescriptoionOne = styled.div`
   display: flex;
@@ -50,6 +51,15 @@ export const DescriptoionOne = styled.div`
   background-color: #000000;
   position: relative;
   height: 100vh;
+  h2 {
+    text-align: center;
+  }
+  @media ${device.mobileL} {
+    h2 {
+      margin: 1rem;
+      font-size: 1rem;
+    }
+  }
 `;
 export const Decoration = styled.div`
   display: flex;
@@ -57,8 +67,14 @@ export const Decoration = styled.div`
   background-color: #000000;
   height: 40rem;
   z-index: 100;
+  @media ${device.mobileL} {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
 `;
-export const LeftWrapper = styled.div`
+export const WhiteWrapper = styled.div`
   height: 100%;
   width: 50%;
   display: flex;
@@ -69,6 +85,10 @@ export const LeftWrapper = styled.div`
   background-color: white;
   color: black;
   position: relative;
+  @media ${device.mobileL} {
+    width: 100%;
+    padding: 0 0 2rem 0;
+  }
 
   button {
     border: unset;
@@ -76,6 +96,13 @@ export const LeftWrapper = styled.div`
     border-radius: 15px;
     background-color: #000000;
     border-radius: 25px;
+    :hover {
+      background-color: #b1b1b1;
+
+      h2 {
+        color: #000000;
+      }
+    }
     h2 {
       font-size: 0.9rem;
       font-weight: 600;
@@ -83,40 +110,32 @@ export const LeftWrapper = styled.div`
       margin: 0;
       color: #ffffff;
     }
-
-    :hover {
-      background-color: #444444;
-    }
   }
-  a {
-    text-decoration: none;
-  }
-
   p {
     text-align: justify;
     color: #000000;
-    width: 24rem;
     font-size: 1.2rem;
     font-weight: 200;
     padding: 1rem;
-    margin: 0 0 2rem 0;
+    margin: 4rem;
     border-radius: 15px;
     z-index: 11;
   }
 `;
-export const RightWrapper = styled.div`
+export const BlackWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-
   height: 100%;
+  overflow: hidden;
+  @media ${device.mobileL} {
+    width: 100%;
+  }
   img {
     height: 30rem;
     margin: 0 2rem 0 2rem;
     z-index: 10;
-
-    /* filter: drop-shadow(4px 5px 20px #2a2a2a); */
   }
 `;
 
@@ -127,13 +146,22 @@ export const MovieDB = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 6rem;
-  background-color: #000000;
-  /* padding-top: 2rem; */
   border-radius: 0 0px 0 0;
   z-index: 11;
+  @media ${device.mobileL} {
+    height: 25rem;
+    img {
+      width: 15rem;
+      height: 7rem;
+    }
+  }
   img {
     width: 20rem;
     height: 9rem;
+    filter: contrast(80%);
+
+    :hover {
+      filter: contrast(100%);
+    }
   }
 `;

@@ -3,11 +3,30 @@ import { size } from "../../Theme/MediaQueries";
 
 export const Wrapper = styled.section`
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: ${size.laptop};
-  background: rgb(44, 62, 80);
-  background: linear-gradient(
-    45deg,
-    rgba(44, 62, 80, 1) 0%,
-    rgba(189, 195, 199, 1) 100%
-  );
+  color: #ffff;
+  height: 80vh;
+  article {
+    text-align: center;
+    margin: 2rem;
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  img {
+    width: 40rem;
+  }
+`;
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  color: #ffff;
+  h2 {
+    margin: 1rem;
+  }
 `;
