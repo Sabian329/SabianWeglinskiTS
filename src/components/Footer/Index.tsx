@@ -29,8 +29,9 @@ export const Footer = () => {
       </SocialWrapper>
       <Heading fontWeight="light">
         {"made by "}
-        <em>Sabian Węgliński</em>
+        <strong>Sabian Węgliński</strong>
       </Heading>
+      <Heading> &copy; 2021 All rights reserved</Heading>
     </FooterWrapper>
   );
 };

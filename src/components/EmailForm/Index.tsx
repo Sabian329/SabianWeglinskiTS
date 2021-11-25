@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Correct, Wrapper } from "./Styled";
+import { Correct, DeliveredText, Wrapper } from "./Styled";
 import emailjs from "emailjs-com";
 import { Input } from "@chakra-ui/input";
 import { Textarea } from "@chakra-ui/textarea";
@@ -17,46 +17,36 @@ export const EmailForm = () => {
   const emailInput = useRef<any>();
   const textInput = useRef<any>();
   const [isSending, setIsSending] = useState(false);
-  const [isNameEmpty, setIsNameEmpty] = useState(false);
-  const [isMailEmpty, setIsMailEmpty] = useState(false);
-  const [isTextEmpty, setIsTextEmpty] = useState(false);
   const [isSend, setIsSend] = useState(false);
+  const [isButtonsActive, setIsButtonsActive] = useState(true);
   const controls = useAnimation();
-  const reset = () => {
-    setIsNameEmpty(false);
-    setIsTextEmpty(false);
-    setIsMailEmpty(false);
-  };
 
   useEffect(() => {
     isSend ? controls.start("start") : controls.start("stop");
   }, [controls, isSend]);
 
   const sendEmail = (e: any) => {
-    !nameInput.current.value ? setIsNameEmpty(true) : setIsNameEmpty(false);
-    !emailInput.current.value ? setIsMailEmpty(true) : setIsMailEmpty(false);
-    !textInput.current.value ? setIsTextEmpty(true) : setIsTextEmpty(false);
-    nameInput.current.value && textInput.current.value && setIsSending(true);
+    setIsSending(true);
     e.preventDefault();
-    nameInput.current.value &&
-      textInput.current.value &&
-      emailjs
-        .sendForm(
-          MailData.YOUR_SERVICE_ID,
-          MailData.YOUR_TEMPLATE_ID,
-          form.current,
-          MailData.YOUR_USER_ID
-        )
-        .then(
-          (result) => {
-            result.status === 200 ? setIsSending(false) : setIsSending(true);
-            result.status === 200 && setIsSend(true);
-            console.log(result.status);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+
+    emailjs
+      .sendForm(
+        MailData.YOUR_SERVICE_ID,
+        MailData.YOUR_TEMPLATE_ID,
+        form.current,
+        MailData.YOUR_USER_ID
+      )
+      .then(
+        (result) => {
+          result.status === 200 ? setIsSending(false) : setIsSending(true);
+          result.status === 200 && setIsSend(true);
+          result.status === 200 && setIsButtonsActive(false);
+          console.log(result.status);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <>
@@ -84,55 +74,48 @@ export const EmailForm = () => {
             <img src={mail} alt="e-mail letter" />
           </motion.div>
         )}
+        {isButtonsActive ? (
+          <>
+            <Heading>leave a message</Heading>
+            <form ref={form} onSubmit={sendEmail}>
+              <label>
+                <Text>Name</Text>
+              </label>
+              <Input required ref={nameInput} type="text" name="from_name" />
+              <label>
+                <Text>Email</Text>
+              </label>
+              <Input required ref={emailInput} type="email" name="user_email" />
+              <label>
+                <Text>Message</Text>
+              </label>
+              <Textarea required ref={textInput} name="message" />
 
-        <Heading>Contact Me</Heading>
-        <form ref={form} onSubmit={sendEmail}>
-          <label>
-            <Text>Name</Text>
-          </label>
-          <Input
-            isInvalid={isNameEmpty}
-            errorBorderColor="crimson"
-            ref={nameInput}
-            type="text"
-            name="from_name"
-          />
-          <label>
-            <Text>Email</Text>
-          </label>
-          <Input
-            isInvalid={isMailEmpty}
-            errorBorderColor="crimson"
-            ref={emailInput}
-            type="email"
-            name="user_email"
-          />
-          <label>
-            <Text>Message</Text>
-          </label>
-          <Textarea
-            isInvalid={isTextEmpty}
-            errorBorderColor="crimson"
-            ref={textInput}
-            name="message"
-          />
-          <ButtonGroup>
-            <Button
-              type="submit"
-              value=""
-              fontWeight="400"
-              isLoading={isSending}
-              bg="#6C63FF"
-            >
-              send
-            </Button>
-            <div onClick={() => reset()}>
-              <Button type="reset" value="" fontWeight="400" bg="#6C63FF">
-                reset
-              </Button>
-            </div>
-          </ButtonGroup>
-        </form>
+              <ButtonGroup>
+                <Button
+                  type="submit"
+                  value=""
+                  fontWeight="400"
+                  isLoading={isSending}
+                  bg="#6C63FF"
+                >
+                  send
+                </Button>
+
+                <div onClick={() => setIsSending(false)}>
+                  <Button type="reset" value="" fontWeight="400" bg="#6C63FF">
+                    reset
+                  </Button>
+                </div>
+              </ButtonGroup>
+            </form>
+          </>
+        ) : (
+          <>
+            <Heading>Thank you !</Heading>
+            <DeliveredText>your message has been delivered</DeliveredText>
+          </>
+        )}
       </Wrapper>
     </>
   );

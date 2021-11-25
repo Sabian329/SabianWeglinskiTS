@@ -9,7 +9,7 @@ export const MainView = () => {
     <motion.div
       animate={{
         opacity: [0, 1],
-        scale: [0.8, 1],
+        scale: [0.99, 1],
       }}
       transition={{ duration: 1.2 }}
     >
@@ -24,8 +24,9 @@ export const MainView = () => {
       "
         />
         <article>
-          I'am focused on writing clean, efficient code, creating modern ,user
-          friendly, responsive layouts based on React.js library.
+          I am focused on writing clean, efficient code, creating modern ,user
+          friendly, responsive layouts based on <strong>React.js</strong>{" "}
+          library.
         </article>
       </Wrapper>
     </motion.div>

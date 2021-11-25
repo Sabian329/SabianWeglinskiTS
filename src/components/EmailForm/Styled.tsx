@@ -15,6 +15,7 @@ export const Wrapper = styled(motion.div)`
   border-radius: 10px;
   padding: 2rem;
   margin: 2rem;
+  flex-flow: ;
   button {
     color: #ffffff;
   }
@@ -31,12 +32,16 @@ export const Wrapper = styled(motion.div)`
   h2 {
     font-weight: 300;
     text-align: center;
+    font-size: 2rem;
   }
   p {
     padding: 0.5rem;
   }
 `;
-
+export const DeliveredText = styled.p`
+  text-align: center;
+  font-size: 0.9rem;
+`;
 export const Correct = styled.div`
   display: flex;
   justify-content: center;

@@ -1,13 +1,12 @@
 import styled from "@emotion/styled";
 import { size } from "../../Theme/MediaQueries";
+import Board from "../../Assets/Cloudy.svg";
 
 export const Wrapper = styled.section`
   overflow: hidden;
   max-width: ${size.laptop};
-  background: rgb(44, 62, 80);
-  background: linear-gradient(
-    45deg,
-    rgba(44, 62, 80, 1) 0%,
-    rgba(189, 195, 199, 1) 100%
-  );
+  background-image: url(${Board});
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 90vh;
 `;
