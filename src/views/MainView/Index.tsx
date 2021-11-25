@@ -9,6 +9,7 @@ export const MainView = () => {
     <motion.div
       animate={{
         opacity: [0, 1],
+        scale: [0.8, 1],
       }}
       transition={{ duration: 1.2 }}
     >

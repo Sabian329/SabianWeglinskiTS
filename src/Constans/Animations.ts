@@ -33,6 +33,17 @@ export const LogoVariants = {
     x: 0,
     opacity: 1,
     transition: {
+      duration: 2,
+    },
+  },
+};
+export const MailVariants = {
+  start: {
+    backgroundColor: "	hsl(110, 22%, 54%)",
+  },
+  stop: {
+    backgroundColor: "	hsl(0, 0%, 78%)",
+    transition: {
       duration: 1,
     },
   },

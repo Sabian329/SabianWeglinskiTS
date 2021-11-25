@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer/Index";
 import { ChakraProvider } from "@chakra-ui/react";
 import overrides from "./Theme/theme";
 import styled from "@emotion/styled";
+import { ContactView } from "./views/ContactView/Index";
 
 function App(): ReactElement {
   return (
@@ -21,6 +22,7 @@ function App(): ReactElement {
             <Route path="/about" element={<AboutView />} />
             <Route path="/myprojects" element={<MyProjectView />} />
             <Route path="/technologies" element={<TechnologiesView />} />
+            <Route path="/contact" element={<ContactView />} />
           </Switch>
           <Footer />
         </BrowserRouter>
