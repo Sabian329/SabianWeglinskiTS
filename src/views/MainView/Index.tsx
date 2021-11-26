@@ -15,7 +15,7 @@ export const MainView = () => {
     >
       <Wrapper>
         <TextWrapper>
-          <Heading>HI, I'M SABIAN</Heading>
+          <Heading>Hi, I'm Sabian</Heading>
           <Text>Front-end Developer</Text>
         </TextWrapper>
         <img

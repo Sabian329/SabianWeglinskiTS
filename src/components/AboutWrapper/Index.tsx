@@ -7,12 +7,12 @@ export const AboutWrapper = () => {
     <>
       <Wrapper>
         <img src={coding} alt="coding svg" />
-        <article>
+        {/* <article>
           My name is Sabian. I'm most passionate about new technologies and
           using them in my projects 🚀.I'am focused on writing clean, efficient
           code. Creating modern, user friendly and responsive layouts based on
           <strong> React.js </strong> n library.
-        </article>
+        </article> */}
       </Wrapper>
     </>
   );

@@ -12,9 +12,7 @@ export const AboutView = () => {
       }}
       transition={{ duration: 1.2 }}
     >
-      <Wrapper>
-        <AboutWrapper />
-      </Wrapper>
+      <Wrapper>{/* <AboutWrapper /> */}</Wrapper>
     </motion.div>
   );
 };
