@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
 import { size } from "../../Theme/MediaQueries";
-import Board from "../../Assets/Cloudy.svg";
+import Board from "../../Assets/BG.svg";
 
 export const Wrapper = styled.section`
-  overflow: hidden;
-  max-width: ${size.laptop};
+  overflow-y: hidden;
+  width: 100vw;
   background-image: url(${Board});
-  background-position: bottom;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
 `;

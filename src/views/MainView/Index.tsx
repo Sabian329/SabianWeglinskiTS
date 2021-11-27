@@ -1,6 +1,7 @@
 import React from "react";
-import { TextWrapper, Wrapper } from "./Styled";
+import { Logo, Png, TextWrapper, Wrapper } from "./Styled";
 import programing from "../../Assets/programing.svg";
+import icon from "../../Assets/ico.svg";
 import { Heading, Text } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 
@@ -15,18 +16,25 @@ export const MainView = () => {
     >
       <Wrapper>
         <TextWrapper>
-          <Heading>Hi, I'm Sabian</Heading>
-          <Text>Front-end Developer</Text>
+          <Heading>"Hello, I'm Sabian"</Heading>
+          <Logo
+            src={icon}
+            alt="Logo
+      "
+          />
+          <h1>Front-end Developer</h1>
         </TextWrapper>
-        <img
+        <Png
           src={programing}
           alt="programist
       "
         />
         <article>
-          I am focused on writing clean, efficient code, creating modern ,user
-          friendly, responsive layouts based on <strong>React.js</strong>{" "}
-          library.
+          <Text>
+            I am focused on writing clean, efficient code, creating modern ,user
+            friendly, responsive layouts based on <strong>React.js</strong>{" "}
+            library.
+          </Text>
         </article>
       </Wrapper>
     </motion.div>

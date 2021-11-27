@@ -14,6 +14,9 @@ export const TextWrapper = styled.div`
   margin: 2rem 0 1rem 0;
   h2 {
     color: #ffffff;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
   }
   p {
     color: #ffffff;
@@ -21,6 +24,6 @@ export const TextWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 17rem;
-  margin: 0 auto;
+  width: 20rem;
+  margin: 0 2rem 0 2rem;
 `;

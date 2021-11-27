@@ -1,3 +1,4 @@
+import Icon from "@chakra-ui/icon";
 import styled from "@emotion/styled";
 
 export const FooterWrapper = styled.footer`
@@ -6,7 +7,6 @@ export const FooterWrapper = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
   color: #ffff;
   padding: 1rem 0 1rem 0;
   margin: 0 0 0 0;
@@ -43,4 +43,7 @@ export const SocialWrapper = styled.div`
       }
     }
   }
+`;
+export const IconLogo = styled.img`
+  width: 2rem;
 `;

@@ -1,14 +1,17 @@
 import styled from "@emotion/styled";
-import { size } from "../../Theme/MediaQueries";
+import BG from "../../Assets/mainBG.svg";
 
 export const Wrapper = styled.section`
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: ${size.laptop};
-  color: #ffff;
-  height: 80vh;
+  color: #000000;
+  background-image: url(${BG});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 73vh;
   article {
     text-align: center;
     margin: 2rem;
@@ -16,17 +19,25 @@ export const Wrapper = styled.section`
     padding: 1rem;
     border-radius: 5px;
   }
-  img {
-    width: 40rem;
-  }
 `;
-export const TextWrapper = styled.div`
+export const TextWrapper = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-  color: #ffff;
+  color: #000000;
   h2 {
     margin: 1rem;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
   }
+  h1 {
+    font-size: 1.2rem;
+  }
+`;
+export const Logo = styled.img`
+  width: 2.5rem;
+`;
+export const Png = styled.img`
+  width: 20rem;
 `;
