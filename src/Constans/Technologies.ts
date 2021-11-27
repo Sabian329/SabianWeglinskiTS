@@ -88,9 +88,9 @@ export const Technologies = [
       "React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.",
   },
   {
-    name: "React Router",
-    logo: "Logos/router.svg",
+    name: "Styled-components",
+    logo: "Logos/styled.svg",
     description:
-      "React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.",
+      "styled-components is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.",
   },
 ];

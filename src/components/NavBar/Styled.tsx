@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import { device } from "../../Theme/MediaQueries";
 
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
@@ -10,5 +11,12 @@ export const StyledLink = styled(NavLink)`
 
   &.active {
     color: #ffffff;
+  }
+`;
+
+export const Wrapper = styled.div`
+  @media ${device.mobileL} {
+    display: flex;
+    flex-direction: column;
   }
 `;
