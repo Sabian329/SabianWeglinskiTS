@@ -22,9 +22,11 @@ export const HamburgerMenu = () => {
   };
   const VariantsBlur = {
     close: {
-      opacity: 0,
+      opacity: 1,
+      display: "none",
     },
     open: {
+      display: "block",
       opacity: 1,
       transition: {
         duration: 0.5,
@@ -59,6 +61,7 @@ export const HamburgerMenu = () => {
         </Wrapper>
       </Motion>
       <Blur
+        onClick={() => setOpen(false)}
         variants={VariantsBlur}
         initial="close"
         animate={isOpen ? "open" : "close"}

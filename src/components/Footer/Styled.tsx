@@ -1,4 +1,3 @@
-import Icon from "@chakra-ui/icon";
 import styled from "@emotion/styled";
 
 export const FooterWrapper = styled.footer`

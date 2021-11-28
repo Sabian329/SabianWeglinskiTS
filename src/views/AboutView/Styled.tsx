@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { size } from "../../Theme/MediaQueries";
 import Board from "../../Assets/BG.svg";
 
 export const Wrapper = styled.section`

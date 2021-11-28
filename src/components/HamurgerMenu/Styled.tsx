@@ -64,8 +64,8 @@ export const Blur = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: #000000ac;
+  background-color: #000000c7;
   top: 0;
   left: 0;
-  z-index: 900;
+  z-index: 100;
 `;

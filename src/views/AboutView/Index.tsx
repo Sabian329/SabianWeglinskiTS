@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import { AboutWrapper } from "../../components/AboutWrapper/Index";
 import { Wrapper } from "./Styled";
 
 export const AboutView = () => {
+  useEffect(() => window.scrollTo(0, 0), []);
+
   return (
     <motion.div
       animate={{

@@ -5,7 +5,7 @@ import { device, size } from "../../Theme/MediaQueries";
 export const Wrapper = styled(motion.div)`
   display: flex;
   width: 22rem;
-  height: 40rem;
+  height: 35rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;

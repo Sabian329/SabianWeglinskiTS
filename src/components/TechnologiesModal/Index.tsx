@@ -9,7 +9,7 @@ import {
   ModalCloseButton,
   Text,
 } from "@chakra-ui/react";
-import { Logo } from "./Styled";
+import { Logo, ModalContentStyled } from "./Styled";
 import { IModalProps } from "../../Constans/Interfaces";
 
 export const TechnologiesModal = ({
@@ -22,7 +22,7 @@ export const TechnologiesModal = ({
   return (
     <Modal onClose={onClose} isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContentStyled>
         <ModalHeader display="flex">
           <Logo src={logo} />
           {name}
@@ -32,7 +32,7 @@ export const TechnologiesModal = ({
           <Text>{description}</Text>
         </ModalBody>
         <ModalFooter></ModalFooter>
-      </ModalContent>
+      </ModalContentStyled>
     </Modal>
   );
 };

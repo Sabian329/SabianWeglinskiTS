@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Logo, Png, TextWrapper, Wrapper } from "./Styled";
 import programing from "../../Assets/programing.svg";
 import icon from "../../Assets/ico.svg";
@@ -6,6 +6,7 @@ import { Heading, Text } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 
 export const MainView = () => {
+  useEffect(() => window.scrollTo(0, 0), []);
   return (
     <motion.div
       animate={{
