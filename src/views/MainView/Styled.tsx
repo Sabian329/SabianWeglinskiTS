@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 73vh;
+  min-height: 73vh;
   article {
     text-align: center;
     margin: 2rem;
@@ -26,6 +26,7 @@ export const TextWrapper = styled.header`
   align-items: center;
   margin: 2rem;
   color: #000000;
+  text-align: center;
   h2 {
     margin: 1rem;
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

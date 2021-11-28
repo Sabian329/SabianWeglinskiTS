@@ -1,14 +1,30 @@
 import React from "react";
 import { StyledLink, Wrapper } from "./Styled";
 
-export const NavBar = () => {
+export const NavBar = ({
+  setOpen,
+  isOpen,
+}: {
+  isOpen?: boolean;
+  setOpen?: any;
+}) => {
   return (
     <Wrapper>
-      <StyledLink to="/">home</StyledLink>
-      <StyledLink to="/about">about</StyledLink>
-      <StyledLink to="/myprojects">my projects</StyledLink>
-      <StyledLink to="/technologies">technologies</StyledLink>
-      <StyledLink to="/contact">contact</StyledLink>
+      <StyledLink onClick={() => setOpen(false)} to="/">
+        home
+      </StyledLink>
+      <StyledLink onClick={() => setOpen(false)} to="/about">
+        about
+      </StyledLink>
+      <StyledLink onClick={() => setOpen(false)} to="/myprojects">
+        my projects
+      </StyledLink>
+      <StyledLink onClick={() => setOpen(false)} to="/technologies">
+        technologies
+      </StyledLink>
+      <StyledLink onClick={() => setOpen(false)} to="/contact">
+        contact
+      </StyledLink>
     </Wrapper>
   );
 };

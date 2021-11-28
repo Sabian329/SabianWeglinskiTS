@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-import { size } from "../../Theme/MediaQueries";
+import { device, size } from "../../Theme/MediaQueries";
 
 export const Wrapper = styled(motion.div)`
   display: flex;
@@ -15,7 +15,10 @@ export const Wrapper = styled(motion.div)`
   border-radius: 10px;
   padding: 2rem;
   margin: 2rem;
-  flex-flow: ;
+  @media ${device.mobileL} {
+    width: 19rem;
+    margin: 4rem 0 0 0;
+  }
   button {
     color: #ffffff;
   }
