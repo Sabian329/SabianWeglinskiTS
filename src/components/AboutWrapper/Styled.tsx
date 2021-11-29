@@ -79,7 +79,7 @@ export const SectionTwo = styled.section`
   }
   article {
     text-align: justify;
-    width: 25rem;
+    width: 35rem;
     padding: 3rem;
     border-radius: 10px;
   }

@@ -36,11 +36,15 @@ export const AboutWrapper = () => {
             <Heading>my story.</Heading>
           </header>
           <Text>
-            My name is Sabian. I'm most passionate about new technologies and
-            using them in my projects 🚀.I'am focused on writing clean,
-            efficient code. Creating modern, user friendly and responsive
-            layouts, especially based on
-            <strong> React.js ⚙️ </strong> library.
+            I've always been fascinated by technology. Over a year ago I started
+            learning Front-End Development. Beginning with static projects in
+            bare HTML, CSS and JavaScript my code evolved into responsive and
+            accessible web apps made in TypeScript and React, with many
+            libraries such as Redux or Chakra-UI. I'm a fast learner and I
+            always try to improve my skills to be ready for every scenario. I do
+            care for clean and efficient code in the projects I'm involved in,
+            always trying to implement as much good practices as possible. I
+            speak both English and Polish, feel free to get in touch with me!
           </Text>
         </article>
         <img src={me} alt="coding svg" />
@@ -52,8 +56,8 @@ export const AboutWrapper = () => {
             <h1>This page was made with create-react-app.</h1>
           </header>
           <Text>
-            I used <strong> TypeScript</strong>, styled-component, React Router,
-            Chakra UI.
+            I used <strong> TypeScript</strong>, styled-components, React Router
+            and Chakra UI. This page also support mobile devices.
           </Text>
           <a
             href="https://github.com/Sabian329/SabianWeglinskiTS"

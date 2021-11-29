@@ -20,10 +20,10 @@ export const projects = [
     logo: "ProjectsViewAssets/CosyCurrency/logoN.png",
     short: "CosyCurrency is a live currency tracker",
     mainImage: "ProjectsViewAssets/CosyCurrency/CC.jpg",
+    overwiewTwo:
+      "Owing to responsive web design and included calculator you have the opportunity to observe and convert plenty of currencies from all over the world. It is also possible to add specific currencies to favourites and thanks to localStorage technology they are available on your device even when you leave CosyCurrency and come back later. ",
     overwiew:
       "Track a handful of currency values in real time with data provided by the National Bank of Poland REST Web API. Built with React with styled-components, deployed on Netlify.",
-    overwiewTwo:
-      "Made possible thanks to The Movie Database REST API. Built with React.js with styled-components and Chakra UI. Deployed on Netlify. ",
     photoOne: "ProjectsViewAssets/CosyCurrency/iphonetrans.png",
     photoTwo: "ProjectsViewAssets/CosyCurrency/airw.png",
     apiLogo: "ProjectsViewAssets/CosyCurrency/nbp.svg",

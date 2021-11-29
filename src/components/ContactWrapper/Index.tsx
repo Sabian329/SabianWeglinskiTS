@@ -4,7 +4,6 @@ import phone from "../../Assets/phone.svg";
 import email from "../../Assets/email.svg";
 import pin from "../../Assets/pin.svg";
 import adress from "../../Assets/adress.svg";
-import { Tooltip } from "@chakra-ui/tooltip";
 import { Heading } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
 
@@ -33,15 +32,10 @@ export const ContactWrapper = () => {
                 <img src={phone} alt="phone" />
               </th>
 
-              <td
-                onClick={() => {
-                  navigator.clipboard.writeText("+48 662 921 107");
-                  alert("phone number copied");
-                }}
-              >
-                <Tooltip hasArrow label="copy">
-                  +48 662 921 107
-                </Tooltip>
+              <td>
+                {/* <Tooltip hasArrow label="call"> */}
+                <a href="tel:+48-662-921-107">+48 662 921 107</a>
+                {/* </Tooltip> */}
               </td>
             </tr>
             <tr>
@@ -53,27 +47,25 @@ export const ContactWrapper = () => {
                   navigator.clipboard.writeText(
                     "sabianweglinski.dev@gmail.com"
                   );
-                  alert("copied");
                 }}
               >
-                <Tooltip hasArrow label="copy">
+                <a href="mailto: sabianweglinski.dev@gmail.com">
                   sabianweglinski.dev@gmail.com
-                </Tooltip>
+                </a>
               </td>
             </tr>
             <tr>
               <th>
                 <img src={pin} alt="phone" />
               </th>
-              <td
-                onClick={() => {
-                  navigator.clipboard.writeText("Legnica");
-                  alert("copied");
-                }}
-              >
-                <Tooltip hasArrow label="copy">
-                  Legnica
-                </Tooltip>
+              <td>
+                <a
+                  href="https://goo.gl/maps/qQVcFvqC444XTRJZA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Legnica, Poland
+                </a>
               </td>
             </tr>
           </tbody>
