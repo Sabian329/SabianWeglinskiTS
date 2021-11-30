@@ -1,11 +1,14 @@
 import React from "react";
-import { Img, Main, Wrapper } from "./Styled";
+import { Img, Main, Wrapper, SocialWrapper } from "./Styled";
 import phone from "../../Assets/phone.svg";
 import email from "../../Assets/email.svg";
 import pin from "../../Assets/pin.svg";
 import adress from "../../Assets/adress.svg";
 import { Heading } from "@chakra-ui/layout";
 import { motion } from "framer-motion";
+import fbLogo from "../../Assets/fb.png";
+import inLogo from "../../Assets/linked.png";
+import gitLogo from "../../Assets/git.png";
 
 export const ContactWrapper = () => {
   return (
@@ -31,11 +34,8 @@ export const ContactWrapper = () => {
               <th>
                 <img src={phone} alt="phone" />
               </th>
-
               <td>
-                {/* <Tooltip hasArrow label="call"> */}
                 <a href="tel:+48-662-921-107">+48 662 921 107</a>
-                {/* </Tooltip> */}
               </td>
             </tr>
             <tr>
@@ -71,6 +71,25 @@ export const ContactWrapper = () => {
           </tbody>
         </table>
       </Wrapper>
+      <SocialWrapper>
+        <a href="https://github.com/Sabian329" target="_blank" rel="noreferrer">
+          <img src={gitLogo} alt="social media logo" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sabian-w%C4%99gli%C5%84ski-7299a0225/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={inLogo} alt="social media logo" />
+        </a>
+        <a
+          href="https://www.facebook.com/sabian.weglinski"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={fbLogo} alt="social media logo" />
+        </a>
+      </SocialWrapper>
     </Main>
   );
 };

@@ -5,7 +5,6 @@ export const Motion = styled(motion.div)`
   position: fixed;
   top: 0;
   right: 0;
-  background-color: violet;
   z-index: 2000;
   width: 50%;
 `;
@@ -29,6 +28,7 @@ export const Wrapper = styled.nav`
   padding: 3rem 0 0 0;
   text-align: left;
   position: relative;
+  min-height: 640px;
 
   img {
     width: 5rem;

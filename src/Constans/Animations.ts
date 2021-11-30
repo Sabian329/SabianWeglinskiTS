@@ -13,6 +13,23 @@ export const PhoneVariants = {
     },
   },
 };
+export const PhoneCCVariants = {
+  hidden: {
+    y: 400,
+    x: 0,
+    opacity: 0,
+    zIndex: 10,
+  },
+  visible: {
+    y: 0,
+    x: 0,
+    opacity: 1,
+    zIndex: 10,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 export const TextVariants = {
   hidden: {
     opacity: 0,

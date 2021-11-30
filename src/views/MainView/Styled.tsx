@@ -6,12 +6,13 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: #000000;
   background-image: url(${BG});
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  min-height: 73vh;
+  min-height: 80vh;
   article {
     text-align: center;
     margin: 2rem;
@@ -38,6 +39,9 @@ export const TextWrapper = styled.header`
 `;
 export const Logo = styled.img`
   width: 2.5rem;
+  :hover {
+    filter: invert(100%);
+  }
 `;
 export const Png = styled.img`
   width: 20rem;

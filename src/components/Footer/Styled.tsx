@@ -10,6 +10,8 @@ export const FooterWrapper = styled.footer`
   padding: 1rem 0 1rem 0;
   margin: 0 0 0 0;
   overflow-y: hidden;
+  background-color: #000000;
+  width: 100vw;
   h2 {
     font-size: 0.8rem;
     margin: 0.5rem;

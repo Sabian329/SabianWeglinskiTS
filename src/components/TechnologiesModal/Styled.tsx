@@ -8,8 +8,8 @@ export const Logo = styled.img`
 `;
 
 export const ModalContentStyled = styled(ModalContent)`
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #444444;
+  color: #ffffff;
   @media ${device.mobileL} {
     width: 80vw;
   }

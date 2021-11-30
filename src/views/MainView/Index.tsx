@@ -11,8 +11,7 @@ export const MainView = () => {
     <>
       <motion.div
         animate={{
-          opacity: [0, 1],
-          scale: [0.99, 1],
+          opacity: [0.1, 1],
         }}
         transition={{ duration: 1.2 }}
       >

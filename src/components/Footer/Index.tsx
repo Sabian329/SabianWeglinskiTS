@@ -1,10 +1,9 @@
 import React from "react";
 import { Heading } from "@chakra-ui/layout";
-import { FooterWrapper, IconLogo, SocialWrapper } from "./Styled";
+import { FooterWrapper, SocialWrapper } from "./Styled";
 import fbLogo from "../../Assets/fb.png";
 import inLogo from "../../Assets/linked.png";
 import gitLogo from "../../Assets/git.png";
-import icon from "../../Assets/ico.svg";
 
 export const Footer = () => {
   return (
@@ -35,7 +34,6 @@ export const Footer = () => {
         </a>
       </Heading>
       <Heading> &copy; 2021 All rights reserved</Heading>
-      <IconLogo src={icon} alt="social media logo" />
     </FooterWrapper>
   );
 };

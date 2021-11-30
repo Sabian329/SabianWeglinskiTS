@@ -9,7 +9,6 @@ import { Button, ButtonGroup } from "@chakra-ui/button";
 import mail from "../../Assets/mail.svg";
 import correct from "../../Assets/correct.svg";
 import { motion, useAnimation } from "framer-motion";
-import { MailVariants } from "../../Constans/Animations";
 
 export const EmailForm = () => {
   const form = useRef<any>();
@@ -50,7 +49,9 @@ export const EmailForm = () => {
   };
   return (
     <>
-      <Wrapper initial="stop" animate={controls} variants={MailVariants}>
+      <Wrapper
+      //  initial="stop" animate={controls} variants={MailVariants}
+      >
         {isSend ? (
           <motion.div
             animate={{

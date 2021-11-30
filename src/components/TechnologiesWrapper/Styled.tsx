@@ -33,7 +33,7 @@ export const TextWrapper = styled.div`
 export const Image = styled.img`
   width: 20rem;
   margin: 0 2rem 0 2rem;
-  @media ${device.mobileLL} {
+  @media ${device.mobileL} {
     width: 12rem;
     margin: 1rem;
   }

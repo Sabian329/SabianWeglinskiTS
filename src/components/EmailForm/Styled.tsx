@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 import { device, size } from "../../Theme/MediaQueries";
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled.div`
   display: flex;
   width: 22rem;
   height: 35rem;
@@ -11,10 +10,11 @@ export const Wrapper = styled(motion.div)`
   justify-content: center;
   overflow-y: hidden;
   max-width: ${size.laptop};
-  background-color: #c7c7c7;
+  background-color: #c7c7c7ce;
+  backdrop-filter: blur(3px);
   border-radius: 10px;
   padding: 2rem;
-  margin: 2rem;
+  margin: 1rem;
   @media ${device.mobileL} {
     width: 19rem;
     margin: 4rem 0 0 0;

@@ -49,6 +49,7 @@ export const Section = styled.section`
       margin-bottom: 1rem;
     }
     article {
+      width: 100vw;
       padding: 3rem;
     }
     img {
@@ -79,7 +80,7 @@ export const SectionTwo = styled.section`
   }
   article {
     text-align: justify;
-    width: 35rem;
+    width: 25rem;
     padding: 3rem;
     border-radius: 10px;
   }
@@ -107,6 +108,7 @@ export const SectionTwo = styled.section`
       margin-bottom: 1rem;
     }
     article {
+      width: 100vw;
       padding: 3rem;
     }
     img {
@@ -169,6 +171,7 @@ export const SectionThree = styled.section`
       margin-bottom: 1rem;
     }
     article {
+      width: 100vw;
       padding: 3rem;
     }
     img {

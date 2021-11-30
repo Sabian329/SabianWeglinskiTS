@@ -20,8 +20,8 @@ export const Titile = styled.div`
     font-size: 1rem;
   }
   img {
-    height: 3.5rem;
     margin: 1rem;
+    width: 17rem;
   }
 `;
 export const MainImage = styled.img`
@@ -123,18 +123,21 @@ export const WhiteWrapper = styled.div`
   }
 `;
 export const BlackWrapper = styled.div`
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
+  min-height: 30rem;
   overflow: hidden;
+  img {
+  }
   @media ${device.mobileL} {
     width: 100%;
   }
   img {
     height: 30rem;
-    margin: 0 2rem 0 2rem;
     z-index: 10;
   }
 `;

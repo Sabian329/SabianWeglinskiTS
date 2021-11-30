@@ -12,6 +12,7 @@ import {
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { PhoneVariants } from "../../Constans/Animations";
+import { PhoneCCVariants } from "../../Constans/Animations";
 import { TextVariants } from "../../Constans/Animations";
 import { ProjectSection } from "../ProjectSection/Index";
 import { IProjectProps } from "../../Constans/Interfaces";
@@ -55,7 +56,9 @@ export const ProjectWrapper = ({
       )}
 
       <Wrapper>
-        <Titile>
+        <Titile
+          style={{ backgroundColor: `${name === "CosyCurrency" && "#82b6e7"}` }}
+        >
           <img src={logo} alt="cosymovies logo" />
           <Heading>{short}</Heading>
         </Titile>
@@ -77,7 +80,7 @@ export const ProjectWrapper = ({
             <motion.div
               initial="hidden"
               animate={controls}
-              variants={PhoneVariants}
+              variants={name === "CosyMovies" ? PhoneVariants : PhoneCCVariants}
             >
               <img
                 src={photoTwo}
@@ -96,6 +99,7 @@ export const ProjectWrapper = ({
           codeLink={codeLink}
           apiLogo={apiLogo}
           apiLink={apiLink}
+          name={name}
         />
       </Wrapper>
     </>

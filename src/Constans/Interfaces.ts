@@ -32,4 +32,5 @@ export interface IProjectSection {
   codeLink: string;
   apiLogo: string;
   apiLink: string;
+  name: string;
 }
