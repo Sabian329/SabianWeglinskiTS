@@ -18,7 +18,7 @@ export const projects = [
   {
     name: "CosyCurrency",
     logo: "ProjectsViewAssets/CosyCurrency/CClogo.svg",
-    short: "CosyCurrency is a live currency tracker",
+    short: "Live currency tracker",
     mainImage: "ProjectsViewAssets/CosyCurrency/CC.jpg",
     overwiewTwo:
       "Owing to responsive web design and included converter you have the opportunity to observe and calculate currencies from all over the world. ",
