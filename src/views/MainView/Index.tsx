@@ -32,7 +32,7 @@ export const MainView = () => {
           />
           <article>
             <Text>
-              I'm focused on writing clean and efficient code. Creating modern,
+              I'm focused on writing clean and efficient code, creating modern,
               user friendly, responsive layouts based on{" "}
               <strong>React.js</strong> library.
             </Text>

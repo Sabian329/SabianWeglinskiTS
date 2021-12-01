@@ -21,8 +21,8 @@ export const AboutWrapper = () => {
             </header>
             <Text>
               My name is Sabian. I'm most passionate about new technologies and
-              using them in my projects. 🚀I'am focused on writing clean,
-              efficient code. Creating modern, user friendly and responsive
+              using them in my projects. 🚀 I'm focused on writing clean,
+              efficient code and creating modern, user friendly and responsive
               layouts, especially based on
               <strong> React.js ⚙️ </strong> library.
             </Text>
@@ -36,13 +36,13 @@ export const AboutWrapper = () => {
             <Heading>my story.</Heading>
           </header>
           <Text>
-            I am aircraft pilot ✈️ aspiring to become a software developer. Over
-            a year ago I started learning Front-End Development. Beginning with
-            static projects in bare HTML, CSS and JavaScript my code evolved
-            into responsive and accessible web apps made in TypeScript and
-            React, with many libraries such as Redux or Chakra-UI. I'm a fast
-            learner. I speak both English and Polish, feel free to get in touch
-            with me! ✌️
+            I am an aircraft pilot ✈️ aspiring to become a software developer.
+            Over a year ago I started learning Front-End Development. Beginning
+            with static projects in bare HTML, CSS and JavaScript my code
+            evolved into responsive and accessible web apps made in TypeScript
+            and React, with many libraries such as Redux or Chakra-UI. I'm a
+            fast learner. I speak both English and Polish. Feel free to get in
+            touch with me! ✌️
           </Text>
         </article>
         <img src={me} alt="coding svg" />

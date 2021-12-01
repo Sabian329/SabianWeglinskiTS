@@ -15,7 +15,7 @@ export const Technologies = [
     name: "JavaScript",
     logo: "Logos/js.svg",
     description:
-      "JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled and multi-paradigm. It has dynamic typing, prototype-based object-orientation and first-class functions.",
+      "JS is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled and multi-paradigm. It has dynamic typing, prototype-based object-orientation and first-class functions.",
   },
   {
     name: "CSS",
@@ -27,13 +27,13 @@ export const Technologies = [
     name: "HTML",
     logo: "Logos/html.svg",
     description:
-      "The HyperText Markup Language, is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading CSS and scripting languages such as JavaScript.",
+      "The HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading CSS and scripting languages such as JavaScript.",
   },
   {
     name: "Node Package Manager",
     logo: "Logos/npm.svg",
     description:
-      "NPM is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.",
+      "NPM is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry. The registry is accessed via the client and the available packages can be browsed and searched via the npm website.",
   },
   {
     name: "GIT",
