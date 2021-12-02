@@ -39,10 +39,9 @@ export const AboutWrapper = () => {
             I am an aircraft pilot ✈️ aspiring to become a software developer.
             Over a year ago I started learning Front-End Development. Beginning
             with static projects in bare HTML, CSS and JavaScript my code
-            evolved into responsive and accessible web apps made in TypeScript
-            and React, with many libraries such as Redux or Chakra-UI. I'm a
-            fast learner. I speak both English and Polish. Feel free to get in
-            touch with me! ✌️
+            evolved into responsive and accessible web apps made in React, with
+            many libraries such as Redux or Chakra-UI. I'm a fast learner. I
+            speak both English and Polish. Feel free to get in touch with me! ✌️
           </Text>
         </article>
         <img src={me} alt="coding svg" />
