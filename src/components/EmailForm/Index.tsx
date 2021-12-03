@@ -13,8 +13,8 @@ import { motion, useAnimation } from "framer-motion";
 export const EmailForm = () => {
   const form = useRef<any>();
   const nameInput = useRef<any>();
-  const emailInput = useRef<any>();
-  const textInput = useRef<any>();
+  const emailInput = useRef<any>(null);
+  const textInput = useRef<any>(null);
   const [isSending, setIsSending] = useState(false);
   const [isSend, setIsSend] = useState(false);
   const [isButtonsActive, setIsButtonsActive] = useState(true);
@@ -24,10 +24,8 @@ export const EmailForm = () => {
     isSend ? controls.start("start") : controls.start("stop");
   }, [controls, isSend]);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = () => {
     setIsSending(true);
-    e.preventDefault();
-
     emailjs
       .sendForm(
         MailData.YOUR_SERVICE_ID,
@@ -49,9 +47,7 @@ export const EmailForm = () => {
   };
   return (
     <>
-      <Wrapper
-      //  initial="stop" animate={controls} variants={MailVariants}
-      >
+      <Wrapper>
         {isSend ? (
           <motion.div
             animate={{
@@ -81,17 +77,21 @@ export const EmailForm = () => {
             <form ref={form} onSubmit={sendEmail}>
               <label>
                 <Text>Name</Text>
+                <Input required ref={nameInput} type="text" name="from_name" />
               </label>
-              <Input required ref={nameInput} type="text" name="from_name" />
               <label>
                 <Text>Email</Text>
+                <Input
+                  required
+                  ref={emailInput}
+                  type="email"
+                  name="user_email"
+                />
               </label>
-              <Input required ref={emailInput} type="email" name="user_email" />
               <label>
                 <Text>Message</Text>
+                <Textarea required ref={textInput} name="message" />
               </label>
-              <Textarea required ref={textInput} name="message" />
-
               <ButtonGroup>
                 <Button
                   type="submit"
