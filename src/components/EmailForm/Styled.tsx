@@ -30,9 +30,7 @@ export const Wrapper = styled.div`
     background-color: #ffffff;
     margin: 0 0 1rem 0;
   }
-  input {
-    background-color: #ffffff;
-  }
+
   h2 {
     font-weight: 300;
     text-align: center;
@@ -59,9 +57,16 @@ export const Correct = styled.div`
     width: 2rem;
   }
 `;
+export const TextInput = styled(Input)`
+  background-color: white;
+`;
+
 export const Submit = styled(Input)`
+  background-color: #6c63ff;
+  border: none;
+  color: white;
   :hover {
-    background-color: #6c63ff;
+    background-color: green;
     color: white;
     cursor: pointer;
   }

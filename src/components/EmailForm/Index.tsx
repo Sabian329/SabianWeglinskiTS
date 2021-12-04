@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Correct, DeliveredText, Submit, Wrapper } from "./Styled";
+import { Correct, DeliveredText, Submit, TextInput, Wrapper } from "./Styled";
 import emailjs from "emailjs-com";
 import { Input } from "@chakra-ui/input";
 import { Textarea } from "@chakra-ui/textarea";
@@ -76,11 +76,16 @@ export const EmailForm = () => {
             <form ref={form} onSubmit={sendEmail}>
               <label>
                 <Text>Name</Text>
-                <Input required ref={nameInput} type="text" name="from_name" />
+                <TextInput
+                  required
+                  ref={nameInput}
+                  type="text"
+                  name="from_name"
+                />
               </label>
               <label>
                 <Text>Email</Text>
-                <Input
+                <TextInput
                   required
                   ref={emailInput}
                   type="email"
