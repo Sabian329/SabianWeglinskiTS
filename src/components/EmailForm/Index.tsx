@@ -11,11 +11,10 @@ import correct from "../../Assets/correct.svg";
 import { motion, useAnimation } from "framer-motion";
 
 export const EmailForm = () => {
-  const form = useRef<any>();
-  const nameInput = useRef<any>();
-  const emailInput = useRef<any>(null);
-  const textInput = useRef<any>(null);
-  const [isSending, setIsSending] = useState(false);
+  const form = useRef<HTMLFormElement | null>(null);
+  const nameInput = useRef<HTMLInputElement | null>(null);
+  const emailInput = useRef<HTMLInputElement | null>(null);
+  const textInput = useRef<HTMLTextAreaElement | null>(null);
   const [isSend, setIsSend] = useState(false);
   const [isButtonsActive, setIsButtonsActive] = useState(true);
   const controls = useAnimation();
@@ -24,8 +23,9 @@ export const EmailForm = () => {
     isSend ? controls.start("start") : controls.start("stop");
   }, [controls, isSend]);
 
-  const sendEmail = () => {
-    setIsSending(true);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     emailjs
       .sendForm(
         MailData.YOUR_SERVICE_ID,
@@ -35,7 +35,6 @@ export const EmailForm = () => {
       )
       .then(
         (result) => {
-          result.status === 200 ? setIsSending(false) : setIsSending(true);
           result.status === 200 && setIsSend(true);
           result.status === 200 && setIsButtonsActive(false);
           console.log(result.status);
@@ -93,21 +92,15 @@ export const EmailForm = () => {
                 <Textarea required ref={textInput} name="message" />
               </label>
               <ButtonGroup>
-                <Button
+                <Input
                   type="submit"
-                  value=""
+                  value="send"
                   fontWeight="400"
-                  isLoading={isSending}
                   bg="#6C63FF"
-                >
-                  send
+                />
+                <Button type="reset" value="" fontWeight="400" bg="#6C63FF">
+                  reset
                 </Button>
-
-                <div onClick={() => setIsSending(false)}>
-                  <Button type="reset" value="" fontWeight="400" bg="#6C63FF">
-                    reset
-                  </Button>
-                </div>
               </ButtonGroup>
             </form>
           </>

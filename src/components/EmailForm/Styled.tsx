@@ -58,3 +58,12 @@ export const Correct = styled.div`
     width: 2rem;
   }
 `;
+export const Submit = styled.input`
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+`;
