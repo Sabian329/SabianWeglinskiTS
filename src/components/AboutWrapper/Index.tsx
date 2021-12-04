@@ -17,7 +17,7 @@ export const AboutWrapper = () => {
           <article>
             <header>
               <Heading>about.</Heading>
-              <h1>I'm a front-end developer based in Legnica, Poland.</h1>
+              <h3>I'm a front-end developer based in Legnica, Poland.</h3>
             </header>
             <Text>
               My name is Sabian. I'm most passionate about new technologies and
@@ -50,7 +50,7 @@ export const AboutWrapper = () => {
         <article>
           <header>
             <Heading>this.page</Heading>
-            <h1>This page was made with create-react-app.</h1>
+            <h3>This page was made with create-react-app.</h3>
           </header>
           <Text>
             I used <strong> TypeScript</strong>, styled-components, React Router

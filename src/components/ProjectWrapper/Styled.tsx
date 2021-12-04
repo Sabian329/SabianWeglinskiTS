@@ -74,7 +74,7 @@ export const Decoration = styled.div`
     height: auto;
   }
 `;
-export const WhiteWrapper = styled.div`
+export const WhiteWrapper = styled.article`
   height: 100%;
   width: 50%;
   display: flex;

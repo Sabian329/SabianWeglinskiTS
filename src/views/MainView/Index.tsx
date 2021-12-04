@@ -23,7 +23,7 @@ export const MainView = () => {
               alt="Logo
       "
             />
-            <h1>Front-end Developer</h1>
+            <h3>Front-end Developer</h3>
           </TextWrapper>
           <Png
             src={programing}

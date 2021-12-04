@@ -17,7 +17,7 @@ export const Section = styled.section`
     margin-bottom: 1rem;
     font-size: 4rem;
   }
-  h1 {
+  h3 {
     color: #000000;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -44,7 +44,7 @@ export const Section = styled.section`
       margin-bottom: 1rem;
       font-size: 3.5rem;
     }
-    h1 {
+    h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
     }
@@ -73,7 +73,7 @@ export const SectionTwo = styled.section`
     margin-bottom: 1rem;
     font-size: 4rem;
   }
-  h1 {
+  h3 {
     color: #ffffff;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -103,7 +103,7 @@ export const SectionTwo = styled.section`
       margin-bottom: 1rem;
       font-size: 3.5rem;
     }
-    h1 {
+    h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
     }
@@ -132,7 +132,7 @@ export const SectionThree = styled.section`
     margin-bottom: 1rem;
     font-size: 4rem;
   }
-  h1 {
+  h3 {
     color: #ffffff;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -166,7 +166,7 @@ export const SectionThree = styled.section`
       margin-bottom: 1rem;
       font-size: 3.5rem;
     }
-    h1 {
+    h3 {
       font-size: 1.3rem;
       margin-bottom: 1rem;
     }

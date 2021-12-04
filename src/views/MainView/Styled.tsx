@@ -33,7 +33,7 @@ export const TextWrapper = styled.header`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  h1 {
+  h3 {
     font-size: 1.2rem;
   }
 `;
