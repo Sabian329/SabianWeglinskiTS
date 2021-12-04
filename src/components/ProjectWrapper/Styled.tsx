@@ -96,6 +96,7 @@ export const WhiteWrapper = styled.div`
     border-radius: 15px;
     background-color: #000000;
     border-radius: 25px;
+    color: #ffffff;
     :hover {
       background-color: #b1b1b1;
 

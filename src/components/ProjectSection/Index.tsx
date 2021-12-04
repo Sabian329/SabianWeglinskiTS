@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ButtonGroup, Button } from "@chakra-ui/button";
-import { Heading, Text } from "@chakra-ui/layout";
+import { Text } from "@chakra-ui/layout";
 import {
   Decoration,
   WhiteWrapper,
@@ -42,14 +42,10 @@ export const ProjectSection = ({
 
             <ButtonGroup justifyContent="center" w="100%">
               <a href={link} target="_blank" rel="noreferrer">
-                <Button>
-                  <Heading>Visit page</Heading>
-                </Button>
+                <Button color="#fffffff">Visit page</Button>
               </a>
               <a href={codeLink} target="_blank" rel="noreferrer">
-                <Button>
-                  <Heading>My code</Heading>
-                </Button>
+                <Button>My code</Button>
               </a>
             </ButtonGroup>
           </motion.div>
