@@ -5,7 +5,6 @@ export interface IProjectProps {
   mainImage: string;
   overwiew: string;
   overwiewTwo: string;
-  photoOne: string;
   photoTwo: string;
   apiLogo: string;
   link: string;
