@@ -86,8 +86,8 @@ export const ProjectWrapper = ({
                 src={photoTwo}
                 alt="the movie db logo"
                 style={{
-                  width: `${name !== "CosyMovies" && "25rem"}`,
-                  height: `${name !== "CosyMovies" && "20rem"}`,
+                  width: `${name !== "CosyMovies" && "20rem"}`,
+                  height: `${name !== "CosyMovies" && "19rem"}`,
                 }}
               ></img>
             </motion.div>

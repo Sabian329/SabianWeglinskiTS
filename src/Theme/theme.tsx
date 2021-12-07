@@ -9,7 +9,7 @@ const overrides = extendTheme({
       body: {
         width: "100%",
         fontFamily: "body",
-        bg: "#000000",
+        bg: "#181818",
         display: "flex",
         justifyContent: "center",
         overflowX: "hidden",

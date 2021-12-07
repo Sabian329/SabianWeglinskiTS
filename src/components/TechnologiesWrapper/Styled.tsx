@@ -8,13 +8,14 @@ export const Wrapper = styled.table`
   flex-wrap: wrap;
   align-items: center;
   align-items: center;
-  background-color: #000000;
 `;
 export const TextWrapper = styled.div`
   padding: 0;
   margin: 2rem 0 1rem 0;
+
   h2 {
     color: #ffffff;
+
     text-align: center;
     font-size: 4rem;
     font-weight: 300;

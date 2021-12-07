@@ -48,7 +48,7 @@ export const DescriptoionOne = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #181818;
   position: relative;
   height: 100vh;
   h2 {
