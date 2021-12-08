@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Correct, DeliveredText, Submit, TextInput, Wrapper } from "./Styled";
 import emailjs from "emailjs-com";
-import { Input } from "@chakra-ui/input";
 import { Textarea } from "@chakra-ui/textarea";
 import { MailData } from "../../Constans/mailjs";
 import { Heading, Text } from "@chakra-ui/layout";

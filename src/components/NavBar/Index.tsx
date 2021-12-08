@@ -1,13 +1,7 @@
 import React from "react";
 import { StyledLink, Wrapper } from "./Styled";
 
-export const NavBar = ({
-  setOpen,
-  isOpen,
-}: {
-  isOpen?: boolean;
-  setOpen?: any;
-}) => {
+export const NavBar = ({ setOpen }: { setOpen?: any }) => {
   return (
     <Wrapper>
       <StyledLink onClick={() => setOpen(false)} to="/">

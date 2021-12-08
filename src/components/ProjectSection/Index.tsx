@@ -19,7 +19,6 @@ export const ProjectSection = ({
   codeLink,
   apiLogo,
   apiLink,
-  name,
 }: IProjectSection) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();

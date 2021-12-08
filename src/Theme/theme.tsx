@@ -2,7 +2,17 @@ import { extendTheme } from "@chakra-ui/react";
 
 const overrides = extendTheme({
   styles: {
-    global: (props: any) => ({
+    global: (props: {
+      html: { width: string };
+      body: {
+        width: string;
+        fontFamily: string;
+        bg: string;
+        display: string;
+        justifyContent: string;
+        overflowX: string;
+      };
+    }) => ({
       html: {
         width: "100%",
       },
