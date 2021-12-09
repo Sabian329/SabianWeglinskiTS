@@ -89,6 +89,13 @@ export const ContactWrapper = () => {
         >
           <img src={fbLogo} alt="social media logo" />
         </a>
+        <a
+          href="https://drive.google.com/file/d/1hB0foZrrbP6Q9Tj4F46hMXmamE8xokw2/view"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div>CV</div>
+        </a>
       </SocialWrapper>
     </Main>
   );

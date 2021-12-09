@@ -82,4 +82,19 @@ export const SocialWrapper = styled.div`
       }
     }
   }
+  div {
+    margin: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 600;
+    background-color: #3b3b3b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    :hover {
+      filter: invert(100%);
+    }
+  }
 `;
