@@ -42,15 +42,9 @@ export const ContactWrapper = () => {
               <th>
                 <img src={email} alt="phone" />
               </th>
-              <td
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    "sabianweglinski.dev@gmail.com"
-                  );
-                }}
-              >
-                <a href="mailto: sabianweglinski.dev@gmail.com">
-                  sabianweglinski.dev@gmail.com
+              <td>
+                <a href="mailto: kontakt@sabianweglinski.pl">
+                  kontakt@sabianweglinski.pl
                 </a>
               </td>
             </tr>
