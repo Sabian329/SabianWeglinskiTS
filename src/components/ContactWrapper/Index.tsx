@@ -43,9 +43,7 @@ export const ContactWrapper = () => {
                 <img src={email} alt="phone" />
               </th>
               <td>
-                <a href="mailto: kontakt@sabianweglinski.pl">
-                  kontakt@sabianweglinski.pl
-                </a>
+                <a href="mailto: sabian329@gmail.com ">sabian329@gmail.com</a>
               </td>
             </tr>
             <tr>
