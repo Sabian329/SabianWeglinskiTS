@@ -1,5 +1,7 @@
 import React from "react";
 import { StyledLink, Wrapper } from "./Styled";
+import { NavbarRoutes } from "../../Constans/navbarRoutes";
+import { INavbarRoutes } from "../../Constans/Interfaces";
 
 export const NavBar = ({
   setOpen,
@@ -8,21 +10,15 @@ export const NavBar = ({
 }) => {
   return (
     <Wrapper>
-      <StyledLink onClick={() => setOpen && setOpen(false)} to="/">
-        home
-      </StyledLink>
-      <StyledLink onClick={() => setOpen && setOpen(false)} to="/about">
-        about
-      </StyledLink>
-      <StyledLink onClick={() => setOpen && setOpen(false)} to="/myprojects">
-        my projects
-      </StyledLink>
-      <StyledLink onClick={() => setOpen && setOpen(false)} to="/technologies">
-        technologies
-      </StyledLink>
-      <StyledLink onClick={() => setOpen && setOpen(false)} to="/contact">
-        contact
-      </StyledLink>
+      {NavbarRoutes.map(({ name, route }: INavbarRoutes) => (
+        <StyledLink
+          key={name}
+          onClick={() => setOpen && setOpen(false)}
+          to={route}
+        >
+          {name}
+        </StyledLink>
+      ))}
     </Wrapper>
   );
 };

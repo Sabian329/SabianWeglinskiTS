@@ -33,3 +33,7 @@ export interface IProjectSection {
   apiLink: string;
   name: string;
 }
+export interface INavbarRoutes {
+  name: string;
+  route: string;
+}

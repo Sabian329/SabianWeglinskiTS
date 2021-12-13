@@ -10,7 +10,7 @@ import correct from "../../Assets/correct.svg";
 import { motion, useAnimation } from "framer-motion";
 
 export const EmailForm = () => {
-  const form = useRef<HTMLFormElement>(null);
+  const form = useRef<any>();
   const nameInput = useRef<HTMLInputElement | null>(null);
   const emailInput = useRef<HTMLInputElement | null>(null);
   const textInput = useRef<HTMLTextAreaElement | null>(null);
@@ -29,7 +29,7 @@ export const EmailForm = () => {
       .sendForm(
         MailData.YOUR_SERVICE_ID,
         MailData.YOUR_TEMPLATE_ID,
-        form?.current,
+        form.current,
         MailData.YOUR_USER_ID
       )
       .then(

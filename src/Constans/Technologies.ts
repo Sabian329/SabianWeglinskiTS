@@ -30,12 +30,12 @@ export const Technologies = [
     description:
       "TypeScript adds additional syntax to JavaScript to support a tighter integration with your editor. Catch errors early in your editor. Learning in progress",
   },
-  {
-    name: "Node Package Manager",
-    logo: "Logos/npm.svg",
-    description:
-      "NPM is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.",
-  },
+  // {
+  //   name: "Node Package Manager",
+  //   logo: "Logos/npm.svg",
+  //   description:
+  //     "NPM is the default package manager for the JavaScript runtime environment Node.js. It consists of a command line client, also called npm, and an online database of public and paid-for private packages, called the npm registry. The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.",
+  // },
   {
     name: "GIT",
     logo: "Logos/git.svg",
@@ -54,28 +54,28 @@ export const Technologies = [
     description:
       "Syntactically awesome style sheets is a preprocessor scripting language that is interpreted or compiled into CSS. SassScript is the scripting language itself.",
   },
-  {
-    name: "Visual Studio Code",
-    logo: "Logos/vs.svg",
-    description: "Visual Studio Code is a source-code editor.",
-  },
-  {
-    name: "Webpack",
-    logo: "Logos/webpack.svg",
-    description:
-      "Webpack is an open-source JavaScript module bundler.It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS.",
-  },
-  {
-    name: "GIMP",
-    logo: "Logos/gimp.svg",
-    description:
-      "GNU Image Manipulation Program is a free and open-source raster graphics editor used for image manipulation and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks.",
-  },
-  {
-    name: "Figma",
-    logo: "Logos/figma.svg",
-    description: "Figma is a vector graphics editor and prototyping tool.",
-  },
+  // {
+  //   name: "Visual Studio Code",
+  //   logo: "Logos/vs.svg",
+  //   description: "Visual Studio Code is a source-code editor.",
+  // },
+  // {
+  //   name: "Webpack",
+  //   logo: "Logos/webpack.svg",
+  //   description:
+  //     "Webpack is an open-source JavaScript module bundler.It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS.",
+  // },
+  // {
+  //   name: "GIMP",
+  //   logo: "Logos/gimp.svg",
+  //   description:
+  //     "GNU Image Manipulation Program is a free and open-source raster graphics editor used for image manipulation and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks.",
+  // },
+  // {
+  //   name: "Figma",
+  //   logo: "Logos/figma.svg",
+  //   description: "Figma is a vector graphics editor and prototyping tool.",
+  // },
   {
     name: "Chakra UI",
     logo: "Logos/chakra.svg",

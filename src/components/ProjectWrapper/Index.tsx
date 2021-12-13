@@ -42,7 +42,7 @@ export const ProjectWrapper = ({
       {name === "CosyMovies" && (
         <motion.div
           animate={{
-            opacity: [0, 1, 0, 0, 0],
+            opacity: [0, 1.5, 0, 0, 0],
             height: [2000, 0],
           }}
           transition={{ duration: [3.45] }}
@@ -59,7 +59,7 @@ export const ProjectWrapper = ({
         <Titile
           style={{ backgroundColor: `${name === "CosyCurrency" && "#82b6e7"}` }}
         >
-          <img src={logo} alt="cosymovies logo" />
+          <img src={logo} alt={`${name} logo`} />
           <Heading>{short}</Heading>
         </Titile>
 
