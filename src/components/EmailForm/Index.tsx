@@ -10,7 +10,7 @@ import correct from "../../Assets/correct.svg";
 import { motion, useAnimation } from "framer-motion";
 
 export const EmailForm = () => {
-  const form = useRef<any>();
+  const form = useRef<HTMLFormElement>(null);
   const nameInput = useRef<HTMLInputElement | null>(null);
   const emailInput = useRef<HTMLInputElement | null>(null);
   const textInput = useRef<HTMLTextAreaElement | null>(null);
@@ -24,12 +24,12 @@ export const EmailForm = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    let FormContent = form.current === null ? "" : form.current;
     emailjs
       .sendForm(
         MailData.YOUR_SERVICE_ID,
         MailData.YOUR_TEMPLATE_ID,
-        form.current,
+        FormContent,
         MailData.YOUR_USER_ID
       )
       .then(
