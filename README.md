@@ -21,7 +21,7 @@
 </div>
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-This is a portfolio website where you can find my projects, technologies i use and contact information. Feel free to get in touch with me!   
+Welcome to my portfolio website where you can find my projects, technologies I use and contact information. Feel free to get in touch with me!   
 ### Built With
 
 - [React.js](https://reactjs.org/)
