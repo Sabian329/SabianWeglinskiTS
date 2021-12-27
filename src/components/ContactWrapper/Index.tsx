@@ -82,7 +82,7 @@ export const ContactWrapper = () => {
           <img src={fbLogo} alt="social media logo" />
         </a>
         <a
-          href="https://drive.google.com/file/d/1hB0foZrrbP6Q9Tj4F46hMXmamE8xokw2/view"
+          href="https://drive.google.com/file/d/1uBh7fcYhrmXZrhNNddNYgruF93-sdr-W/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
