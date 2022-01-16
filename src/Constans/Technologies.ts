@@ -54,28 +54,28 @@ export const Technologies = [
     description:
       "Syntactically awesome style sheets is a preprocessor scripting language that is interpreted or compiled into CSS. SassScript is the scripting language itself.",
   },
-  // {
-  //   name: "Visual Studio Code",
-  //   logo: "Logos/vs.svg",
-  //   description: "Visual Studio Code is a source-code editor.",
-  // },
-  // {
-  //   name: "Webpack",
-  //   logo: "Logos/webpack.svg",
-  //   description:
-  //     "Webpack is an open-source JavaScript module bundler.It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS.",
-  // },
-  // {
-  //   name: "GIMP",
-  //   logo: "Logos/gimp.svg",
-  //   description:
-  //     "GNU Image Manipulation Program is a free and open-source raster graphics editor used for image manipulation and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks.",
-  // },
-  // {
-  //   name: "Figma",
-  //   logo: "Logos/figma.svg",
-  //   description: "Figma is a vector graphics editor and prototyping tool.",
-  // },
+  {
+    name: "Visual Studio Code",
+    logo: "Logos/vs.svg",
+    description: "Visual Studio Code is a source-code editor.",
+  },
+  {
+    name: "Webpack",
+    logo: "Logos/webpack.svg",
+    description:
+      "Webpack is an open-source JavaScript module bundler.It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS.",
+  },
+  {
+    name: "GIMP",
+    logo: "Logos/gimp.svg",
+    description:
+      "GNU Image Manipulation Program is a free and open-source raster graphics editor used for image manipulation and image editing, free-form drawing, transcoding between different image file formats, and more specialized tasks.",
+  },
+  {
+    name: "Figma",
+    logo: "Logos/figma.svg",
+    description: "Figma is a vector graphics editor and prototyping tool.",
+  },
   {
     name: "Chakra UI",
     logo: "Logos/chakra.svg",

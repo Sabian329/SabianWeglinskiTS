@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.td`
+export const Wrapper = styled.li`
   width: 10rem;
   height: 10rem;
   display: flex;
@@ -9,7 +9,6 @@ export const Wrapper = styled.td`
   flex-direction: column;
   color: #000000;
   background-color: #ffffff;
-  margin: 1rem;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;

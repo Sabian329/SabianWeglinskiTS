@@ -1,13 +1,21 @@
-import styled from "@emotion/styled";
 import { device } from "../../Theme/MediaQueries";
+import styled from "@emotion/styled";
 
-export const Wrapper = styled.table`
-  padding: 2rem;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  align-items: center;
+export const Wrapper = styled.ul`
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  @media ${device.laptop} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media ${device.mobileLL} {
+    grid-template-columns: 1fr;
+  }
 `;
 export const TextWrapper = styled.div`
   padding: 0;
