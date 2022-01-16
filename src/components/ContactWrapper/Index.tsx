@@ -1,27 +1,19 @@
-import React from "react";
-import { Img, Main, Wrapper, SocialWrapper } from "./Styled";
-import phone from "../../Assets/phone.svg";
-import email from "../../Assets/email.svg";
-import pin from "../../Assets/pin.svg";
-import adress from "../../Assets/adress.svg";
+import { Img, Main, SocialWrapper, Wrapper } from "./Styled";
+
 import { Heading } from "@chakra-ui/layout";
-import { motion } from "framer-motion";
+import React from "react";
+import adress from "../../Assets/adress.svg";
+import email from "../../Assets/email.svg";
 import fbLogo from "../../Assets/fb.png";
-import inLogo from "../../Assets/linked.png";
 import gitLogo from "../../Assets/git.png";
+import inLogo from "../../Assets/linked.png";
+import phone from "../../Assets/phone.svg";
+import pin from "../../Assets/pin.svg";
 
 export const ContactWrapper = () => {
   return (
     <Main>
-      <motion.div
-        animate={{
-          opacity: [0.1, 1],
-          scale: [0.98, 1],
-        }}
-        transition={{ duration: 1 }}
-      >
-        <Img src={adress} />
-      </motion.div>
+      <Img src={adress} />
       <Heading>contact</Heading>
       <Wrapper>
         <table>

@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import { size } from "../../Theme/MediaQueries";
 import { device } from "../../Theme/MediaQueries";
+import { size } from "../../Theme/MediaQueries";
+import styled from "@emotion/styled";
 
 export const Section = styled.section`
   margin: 0 auto;
@@ -28,7 +28,7 @@ export const Section = styled.section`
     padding: 3rem;
   }
   img {
-    width: 30rem;
+    width: 20rem;
     margin: 5rem;
   }
   @media ${device.laptop} {

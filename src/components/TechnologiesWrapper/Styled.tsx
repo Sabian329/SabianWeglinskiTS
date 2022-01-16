@@ -6,7 +6,7 @@ export const Wrapper = styled.ul`
   gap: 2rem;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
+  margin: 2rem;
   @media ${device.laptop} {
     grid-template-columns: 1fr 1fr 1fr;
   }

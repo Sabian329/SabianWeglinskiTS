@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Correct, DeliveredText, Submit, TextInput, Wrapper } from "./Styled";
-import emailjs from "emailjs-com";
-import { Textarea } from "@chakra-ui/textarea";
-import { MailData } from "../../Constans/mailjs";
-import { Heading, Text } from "@chakra-ui/layout";
 import { Button, ButtonGroup } from "@chakra-ui/button";
-import mail from "../../Assets/mail.svg";
-import correct from "../../Assets/correct.svg";
+import { Correct, DeliveredText, Submit, TextInput, Wrapper } from "./Styled";
+import { Heading, Text } from "@chakra-ui/layout";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+
+import { MailData } from "../../Constans/mailjs";
+import { Textarea } from "@chakra-ui/textarea";
+import correct from "../../Assets/correct.svg";
+import emailjs from "emailjs-com";
+import mail from "../../Assets/mail.svg";
 
 export const EmailForm = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -60,14 +61,7 @@ export const EmailForm = () => {
             </Correct>
           </motion.div>
         ) : (
-          <motion.div
-            animate={{
-              opacity: [0, 1],
-              scale: [0.9, 1],
-            }}
-          >
-            <img src={mail} alt="e-mail letter" />
-          </motion.div>
+          <img src={mail} alt="e-mail letter" />
         )}
         {isButtonsActive ? (
           <>

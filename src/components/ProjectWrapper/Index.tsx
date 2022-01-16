@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
-import { Heading, Text } from "@chakra-ui/layout";
 import {
+  BlackWrapper,
   Descriptoion,
   DescriptoionOne,
-  WhiteWrapper,
   MainImage,
-  BlackWrapper,
   Titile,
+  WhiteWrapper,
   Wrapper,
 } from "./Styled";
+import { Heading, Text } from "@chakra-ui/layout";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { PhoneVariants } from "../../Constans/Animations";
-import { PhoneCCVariants } from "../../Constans/Animations";
-import { TextVariants } from "../../Constans/Animations";
-import { ProjectSection } from "../ProjectSection/Index";
+
 import { IProjectProps } from "../../Constans/Interfaces";
+import { PhoneCCVariants } from "../../Constans/Animations";
+import { PhoneVariants } from "../../Constans/Animations";
+import { ProjectSection } from "../ProjectSection/Index";
+import { TextVariants } from "../../Constans/Animations";
+import { useInView } from "react-intersection-observer";
 
 export const ProjectWrapper = ({
   name,
@@ -42,7 +43,7 @@ export const ProjectWrapper = ({
       {name === "CosyMovies" && (
         <motion.div
           animate={{
-            opacity: [0, 1.5, 0, 0, 0],
+            opacity: [0, 2.5, 0, 0, 0],
             height: [2000, 0],
           }}
           transition={{ duration: [3.45] }}

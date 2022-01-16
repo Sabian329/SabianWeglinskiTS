@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { Wrapper } from "./Styled";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useDisclosure } from "@chakra-ui/hooks";
-import { TechnologiesModal } from "../TechnologiesModal/Index";
+
 import { ITechnologiesProps } from "../../Constans/Interfaces";
 import { PhoneVariantsTech } from "../../Constans/Animations";
+import { TechnologiesModal } from "../TechnologiesModal/Index";
+import { Wrapper } from "./Styled";
+import { useDisclosure } from "@chakra-ui/hooks";
+import { useInView } from "react-intersection-observer";
 
 export const TechnologiesItem = ({
   name,
@@ -28,21 +29,19 @@ export const TechnologiesItem = ({
       variants={PhoneVariantsTech}
     >
       <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 1.09 }}>
-        <tr>
-          <Wrapper ref={ref} onClick={onOpen}>
-            <p>{name}</p>
+        <Wrapper ref={ref} onClick={onOpen}>
+          <p>{name}</p>
 
-            <img src={logo} alt={`${name} logo`} />
+          <img src={logo} alt={`${name} logo`} />
 
-            <TechnologiesModal
-              description={description}
-              name={name}
-              logo={logo}
-              onClose={onClose}
-              isOpen={isOpen}
-            />
-          </Wrapper>
-        </tr>
+          <TechnologiesModal
+            description={description}
+            name={name}
+            logo={logo}
+            onClose={onClose}
+            isOpen={isOpen}
+          />
+        </Wrapper>
       </motion.div>
     </motion.div>
   );
