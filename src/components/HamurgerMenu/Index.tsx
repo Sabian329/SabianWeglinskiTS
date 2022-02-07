@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { Spin as SpinIcon } from "hamburger-react";
 import { Blur, IconWrapper, Motion, Navfoot, Wrapper } from "./Styled";
-import { NavBar } from "../NavBar/Index";
-import icon from "../../Assets/ico.svg";
+import React, { useState } from "react";
 import { VariantsBlur, VariantsNavigation } from "../../Constans/Animations";
+
+import { NavBar } from "../NavBar/Index";
+import { Spin as SpinIcon } from "hamburger-react";
+import icon from "../../Assets/ico.svg";
 
 export const HamburgerMenu = () => {
   const [isOpen, setOpen] = useState<boolean>(false);

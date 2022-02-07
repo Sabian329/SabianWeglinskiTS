@@ -1,7 +1,6 @@
 import {
   BlackWrapper,
   Descriptoion,
-  DescriptoionOne,
   MainImage,
   Titile,
   WhiteWrapper,
@@ -39,70 +38,52 @@ export const ProjectWrapper = ({
   }, [controls, inView]);
 
   return (
-    <>
-      {name === "CosyMovies" && (
-        <motion.div
-          animate={{
-            opacity: [0, 2.5, 0, 0, 0],
-            height: [2000, 0],
-          }}
-          transition={{ duration: [3.45] }}
-        >
-          <DescriptoionOne>
-            <Heading color="white" fontWeight="300" fontSize="2rem">
-              Immerse yourself in the world of movies and television series.
-            </Heading>
-          </DescriptoionOne>
-        </motion.div>
-      )}
+    <Wrapper>
+      <Titile
+        style={{ backgroundColor: `${name === "CosyCurrency" && "#82b6e7"}` }}
+      >
+        <img src={logo} alt={`${name} logo`} />
+        <Heading>{short}</Heading>
+      </Titile>
 
-      <Wrapper>
-        <Titile
-          style={{ backgroundColor: `${name === "CosyCurrency" && "#82b6e7"}` }}
-        >
-          <img src={logo} alt={`${name} logo`} />
-          <Heading>{short}</Heading>
-        </Titile>
+      <MainImage src={mainImage} alt="cosymovies poster" />
 
-        <MainImage src={mainImage} alt="cosymovies poster" />
-
-        <Descriptoion>
-          <WhiteWrapper>
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={controls}
-              variants={TextVariants}
-            >
-              <Text>{overwiew}</Text>
-            </motion.div>
-          </WhiteWrapper>
-          <BlackWrapper>
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={name === "CosyMovies" ? PhoneVariants : PhoneCCVariants}
-            >
-              <img
-                src={photoTwo}
-                alt="the movie db logo"
-                style={{
-                  width: `${name !== "CosyMovies" && "20rem"}`,
-                  height: `${name !== "CosyMovies" && "19rem"}`,
-                }}
-              ></img>
-            </motion.div>
-          </BlackWrapper>
-        </Descriptoion>
-        <ProjectSection
-          overwiewTwo={overwiewTwo}
-          link={link}
-          codeLink={codeLink}
-          apiLogo={apiLogo}
-          apiLink={apiLink}
-          name={name}
-        />
-      </Wrapper>
-    </>
+      <Descriptoion>
+        <WhiteWrapper>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={TextVariants}
+          >
+            <Text>{overwiew}</Text>
+          </motion.div>
+        </WhiteWrapper>
+        <BlackWrapper>
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={name === "CosyMovies" ? PhoneVariants : PhoneCCVariants}
+          >
+            <img
+              src={photoTwo}
+              alt="the movie db logo"
+              style={{
+                width: `${name !== "CosyMovies" && "20rem"}`,
+                height: `${name !== "CosyMovies" && "19rem"}`,
+              }}
+            ></img>
+          </motion.div>
+        </BlackWrapper>
+      </Descriptoion>
+      <ProjectSection
+        overwiewTwo={overwiewTwo}
+        link={link}
+        codeLink={codeLink}
+        apiLogo={apiLogo}
+        apiLink={apiLink}
+        name={name}
+      />
+    </Wrapper>
   );
 };
